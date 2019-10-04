@@ -20,7 +20,7 @@
     color: #007bff;
 }
 
-
+/*PARTIE SUR LE MENU D2ROULANT QUI PEUT ETRE UTILE POUR LES STATS PAR EXEMPLE */
 /*test menu déroulant*/
 /* partie positionnement et déco */
 #menu a { 
@@ -61,7 +61,6 @@
 }
 /* ici on change la valeur de max-height au :hover */
 #menu > li:hover ul {
-    /* à adapter, le minimum est le meilleur mais voyez large 😉 */
     max-height: 20em;
     margin-top: 10px;
     padding-bottom: 5px;
@@ -79,6 +78,7 @@
     }
 }
 
+/*PARTIE SUR LA BARRE DE NAVIGATION*/
 #nav {
 
 
@@ -105,42 +105,7 @@
   transition: all ease .5s;
 }
 
-/*css du burger*/
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle:hover {
-    background-color: transparent;
-}
 
-.navbar-default .navbar-toggle {
-    border: none;
-}
-
-.navbar-toggle span.icon-bar {
-    transition: all 0.15s;
-}
-
-.navbar-toggle span:nth-child(2) {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
-}
-
-.navbar-toggle span:nth-child(3) {
-    opacity: 0;
-}
-
-.navbar-toggle span:nth-child(4) {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
-}
-
-.navbar-toggle.collapsed span:nth-child(2),
-.navbar-toggle.collapsed span:nth-child(4) {
-    transform: rotate(0);
-}
-
-.navbar-toggle.collapsed span:nth-child(3) {
-    opacity: 1;
-}
 
 /*css du footer*/
 .footer_liens{
