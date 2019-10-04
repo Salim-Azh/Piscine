@@ -1,0 +1,242 @@
+
+.back{
+   
+   
+    background-repeat:no-repeat;
+ 
+
+}
+ @media only screen and (max-width: 320px) {
+            .back { 
+                background-image: url(smallback.jpg); 
+            }
+        }
+.font{
+    font-family: 'Roboto', sans-serif;
+    color: #1f2b4d;
+}
+.font_blue{
+    font-family: 'Roboto', sans-serif;
+    color: #007bff;
+}
+.font_courgette{
+    font-family: 'Courgette', cursive;
+    color: #d61c22;
+}
+.font_carte{
+    font-family: 'Poppins', sans-serif;
+}
+
+.font_carte_rouge{
+    font-family: 'Poppins', sans-serif;
+    color: #d61c22;
+}
+
+.front-page-content{
+	background-image: url('img/pattern1.png');
+    background-repeat: repeat;
+
+}
+.font-page-content2{
+    background-image: url('img/pattern2.png');
+    background-repeat: repeat;
+
+}
+.font_titre{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #282E3A;
+}
+/*test menu déroulant*/
+/* partie positionnement et déco */
+#menu a { 
+    display:block; 
+    color:#5a5a5a;
+    text-decoration:none;
+}
+#menu > li,
+#menu > li li {
+    position: relative;
+    display:inline-block;
+
+
+}
+
+
+#menu li li:hover { background-color: rgba(236, 240, 243) }
+
+
+
+/* (presque) fin de la partie positionnement/déco */
+/* dans cette déclaration, on fixe le max-height */
+@media only screen and (min-width: 991px) {
+    #menu ul {
+ 
+        position: absolute;
+    }
+}
+#menu ul {
+    top: 2em; left: 0;
+    max-height:0em; 
+    margin: 0; padding: 0;
+    background-color: rgba(244, 244, 244, 0.95);
+    overflow: hidden;
+    transition: 0.5s max-height 0.01s;
+    border-radius: 1px 0 3px 3px;
+    margin-top: 10px;
+}
+/* ici on change la valeur de max-height au :hover */
+#menu > li:hover ul {
+    /* à adapter, le minimum est le meilleur mais voyez large 😉 */
+    max-height: 20em;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+/*enlever le surlignement sur un a au passage de la souris*/
+#nav.a:hover {
+    text-decoration: none ;
+}
+/*animation barre menu*/
+@media only screen and (min-width: 991px) {
+    #nav {
+
+        height: 100px ;
+    }
+}
+
+#nav {
+
+
+  background-color: rgba(243, 240, 239, 0.85);
+  transition: all ease .5s;
+
+}
+
+
+#nav.shrink {
+  
+  height: 70px ;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: all ease 1s;
+}
+
+#nav.shrink #titre {
+  font-size: 30px;
+  transition: all ease .5s;
+}
+
+#nav.shrink #logo {
+  padding: 7px;
+  transition: all ease .5s;
+}
+
+/*css du burger*/
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar-toggle span.icon-bar {
+    transition: all 0.15s;
+}
+
+.navbar-toggle span:nth-child(2) {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggle span:nth-child(3) {
+    opacity: 0;
+}
+
+.navbar-toggle span:nth-child(4) {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+
+.navbar-toggle.collapsed span:nth-child(2),
+.navbar-toggle.collapsed span:nth-child(4) {
+    transform: rotate(0);
+}
+
+.navbar-toggle.collapsed span:nth-child(3) {
+    opacity: 1;
+}
+
+/*css du footer*/
+.footer_liens{
+    color : grey;
+
+}
+.footer_liens:hover{
+    text-decoration: none;
+     transition: all ease .2s;
+    color: #031513;
+
+}
+.footer_logos{
+   
+}
+.footer_logos:hover{
+     transition: all ease .2s;
+    transform: scale(1.1);
+}
+
+.titre_presentation{
+	color:#000000;
+	font-family: 'Roboto', sans-serif;
+  
+}
+
+/*apparition image bienvenue*/
+.bienvenue_image{
+	animation: fadein 0.2s;
+	-moz-animation: fadein 0.2s; /* Firefox */
+    -webkit-animation: fadein 0.2s; /* Safari et Chrome */
+    -o-animation: fadein 0.2s; /* Opera */
+}
+
+/*apparition du bienvenue accueil*/
+.bienvenue{
+	animation: fadein 1.2s;
+	-moz-animation: fadein 1.2s; /* Firefox */
+    -webkit-animation: fadein 1.2s; /* Safari et Chrome */
+    -o-animation: fadein1.2s; /* Opera */
+
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
