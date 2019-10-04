@@ -1,5 +1,4 @@
-<!-- on insere le script de l'ajax -->
-<script type="text/javascript" src="./js/ajax.js"></script>
+
 
 <!-- Footer -->
 <footer>

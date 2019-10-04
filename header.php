@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,14 +13,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <!-- font roboto -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <!-- font titre courgette -->
-    <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <!-- font presentation -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <!-- carte -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
-    <!-- titre test -->
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <!-- jquery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- Navigation dynamique -->

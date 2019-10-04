@@ -19,33 +19,8 @@
     font-family: 'Roboto', sans-serif;
     color: #007bff;
 }
-.font_courgette{
-    font-family: 'Courgette', cursive;
-    color: #d61c22;
-}
-.font_carte{
-    font-family: 'Poppins', sans-serif;
-}
 
-.font_carte_rouge{
-    font-family: 'Poppins', sans-serif;
-    color: #d61c22;
-}
 
-.front-page-content{
-	background-image: url('img/pattern1.png');
-    background-repeat: repeat;
-
-}
-.font-page-content2{
-    background-image: url('img/pattern2.png');
-    background-repeat: repeat;
-
-}
-.font_titre{
-    font-family: 'Josefin Sans', sans-serif;
-    color: #282E3A;
-}
 /*test menu déroulant*/
 /* partie positionnement et déco */
 #menu a { 
@@ -178,9 +153,6 @@
     color: #031513;
 
 }
-.footer_logos{
-   
-}
 .footer_logos:hover{
      transition: all ease .2s;
     transform: scale(1.1);
@@ -192,22 +164,7 @@
   
 }
 
-/*apparition image bienvenue*/
-.bienvenue_image{
-	animation: fadein 0.2s;
-	-moz-animation: fadein 0.2s; /* Firefox */
-    -webkit-animation: fadein 0.2s; /* Safari et Chrome */
-    -o-animation: fadein 0.2s; /* Opera */
-}
 
-/*apparition du bienvenue accueil*/
-.bienvenue{
-	animation: fadein 1.2s;
-	-moz-animation: fadein 1.2s; /* Firefox */
-    -webkit-animation: fadein 1.2s; /* Safari et Chrome */
-    -o-animation: fadein1.2s; /* Opera */
-
-}
 @keyframes fadein {
     from {
         opacity:0;
