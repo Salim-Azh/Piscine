@@ -39,7 +39,7 @@
       <h1 id="titre" class="row font_blue align-items-center mt-2 ">
       <!-- logo de l'entreprise -->
       <img id="logo" src=".\img\toeic.jpg" width="70" height="70" class="align-items-center logo" >
-      <strong>&nbsp;TOEIC BLANC</strong></h1>
+      <strong>&nbsp;TOEIC</strong></h1>
       <!-- bouton hamburger pour un menu responsif -->
       <a class="navbar-brand d-flex justify-content-end">  
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_target" aria-controls="collapse_target" aria-expanded="false" aria-label="Toggle navigation">

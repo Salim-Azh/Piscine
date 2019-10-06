@@ -5,7 +5,7 @@ $(document).ready(function() {
 		$(window).scroll(function() {
 
 		
-	  	if($(document).scrollTop() >= 80 && $(window).width() > 1100 ) {
+	  	if($(document).scrollTop() >= 80 && $(window).width() > 991 ) {
 
 	    	$('#nav').addClass('shrink');
 	    	$('#nav').removeClass('phone');
@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 	   	 }
 
-	   	 else if($(document).scrollTop() <= 1 && $(window).width() > 1100 ){
+	   	 else if($(document).scrollTop() <= 1 && $(window).width() > 991 ){
 	     $('#nav').removeClass('shrink');
 	     } 
 
@@ -26,7 +26,7 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$(window).resize(function(){
 		var width = $(window).width();
-		if(width <  1100){
+		if(width <  991){
 			$('#nav').addClass('phone');
 			$('#nav').removeClass('shrink');
 

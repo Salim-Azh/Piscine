@@ -4,7 +4,6 @@
    
     background-repeat:no-repeat;
  
-
 }
  @media only screen and (max-width: 320px) {
             .back { 
@@ -105,9 +104,15 @@
   transition: all ease .5s;
 }
 
+/*css accueil img*/
+@media only screen and (max-width: 991px) {
+    .img-accueil{
+        display: none;
+    }   
+}
 
 
-/*css du footer*/
+/*css du footer pas de footer pour le moment*/
 .footer_liens{
     color : grey;
 
