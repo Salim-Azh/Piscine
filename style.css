@@ -1,15 +1,21 @@
-
-.back{
-   
-   
-    background-repeat:no-repeat;
- 
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    display : table;
+    width: 100%;
+}
+footer {
+    display : table-row;
+    height: 50px; /* à titre d'exemple */
 }
  @media only screen and (max-width: 320px) {
             .back { 
                 background-image: url(smallback.jpg); 
             }
         }
+}
 .font{
     font-family: 'Roboto', sans-serif;
     color: #1f2b4d;
@@ -111,6 +117,7 @@
     }   
 }
 
+/*css pour la partie register / inscription*/
 
 /*css du footer pas de footer pour le moment*/
 .footer_liens{

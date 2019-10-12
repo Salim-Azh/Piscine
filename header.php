@@ -75,7 +75,7 @@
           </li>
 
           <li>
-            <a class="mr-2 nav-link " href="./menu.php" >CREER UN COMPTE</a>
+            <a class="mr-2 nav-link " href="./register.php" >CREER UN COMPTE</a>
           </li>
           
           <!-- apparation de certaines fonctionnalités en fonction d'evnts -->
