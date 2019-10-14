@@ -40,7 +40,7 @@
 			     	</div>
 			     	<div class="mt-2">
 			     		<label class="d-flex flex-row " for="exampleInputEmail1">Numéro étudiant</label>
-			     		<input type="email" class="form-control" required aria-describedby="emailHelp" placeholder="Votre numéro étudiant">
+			     		<input type="text" class="form-control" required aria-describedby="emailHelp" placeholder="Votre numéro étudiant">
 
 			     	</div>
 			     	<div class="mt-2">
