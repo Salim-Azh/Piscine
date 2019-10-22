@@ -1,0 +1,176 @@
+html, body {
+    height: 100%;
+    margin: 0; padding: 0;
+}
+body {
+    display : table;
+    width: 100%;
+}
+footer {
+    display : table-row;
+    height: 50px; /* à titre d'exemple */
+}
+ @media only screen and (max-width: 320px) {
+            .back { 
+                background-image: url(smallback.jpg); 
+            }
+        }
+}
+.font{
+    font-family: 'Roboto', sans-serif;
+    color: #1f2b4d;
+}
+.font_blue{
+    font-family: 'Roboto', sans-serif;
+    color: #007bff;
+}
+
+/*PARTIE SUR LE MENU D2ROULANT QUI PEUT ETRE UTILE POUR LES STATS PAR EXEMPLE */
+/*test menu déroulant*/
+/* partie positionnement et déco */
+#menu a { 
+    display:block; 
+    color:#5a5a5a;
+    text-decoration:none;
+}
+#menu > li,
+#menu > li li {
+    position: relative;
+    display:inline-block;
+
+
+}
+
+
+#menu li li:hover { background-color: rgba(236, 240, 243) }
+
+
+
+/* (presque) fin de la partie positionnement/déco */
+/* dans cette déclaration, on fixe le max-height */
+@media only screen and (min-width: 991px) {
+    #menu ul {
+ 
+        position: absolute;
+    }
+}
+#menu ul {
+    top: 2em; left: 0;
+    max-height:0em; 
+    margin: 0; padding: 0;
+    background-color: rgba(244, 244, 244, 0.95);
+    overflow: hidden;
+    transition: 0.5s max-height 0.01s;
+    border-radius: 1px 0 3px 3px;
+    margin-top: 10px;
+}
+/* ici on change la valeur de max-height au :hover */
+#menu > li:hover ul {
+    max-height: 20em;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+/*enlever le surlignement sur un a au passage de la souris*/
+#nav.a:hover {
+    text-decoration: none ;
+}
+/*animation barre menu*/
+@media only screen and (min-width: 991px) {
+    #nav {
+
+        height: 100px ;
+    }
+}
+
+/*PARTIE SUR LA BARRE DE NAVIGATION*/
+#nav {
+
+
+  background-color: rgba(243, 240, 239, 0.85);
+  transition: all ease .5s;
+
+}
+
+
+#nav.shrink {
+  
+  height: 70px ;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: all ease 1s;
+}
+
+#nav.shrink #titre {
+  font-size: 30px;
+  transition: all ease .5s;
+}
+
+#nav.shrink #logo {
+  padding: 7px;
+  transition: all ease .5s;
+}
+
+/*css accueil img*/
+@media only screen and (max-width: 991px) {
+    .img-accueil{
+        display: none;
+    }   
+}
+
+/*css pour la partie register / inscription*/
+
+/*css du footer pas de footer pour le moment*/
+.footer_liens{
+    color : grey;
+
+}
+.footer_liens:hover{
+    text-decoration: none;
+     transition: all ease .2s;
+    color: #031513;
+
+}
+.footer_logos:hover{
+     transition: all ease .2s;
+    transform: scale(1.1);
+}
+
+.titre_presentation{
+	color:#000000;
+	font-family: 'Roboto', sans-serif;
+  
+}
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
