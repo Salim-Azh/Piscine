@@ -3,7 +3,7 @@
 <?php 
       include("header.php");
 ?>
-<script src="./js/inscription.js"></script>
+<script src="../js/inscription.js"></script>
 <div class="container mt-5 mb-5">
 	<div class="text-center">
 		<h3 class="mb-3 font-weight-normal">Créer un compte</h3>

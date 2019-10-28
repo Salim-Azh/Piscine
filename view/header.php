@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <!-- favicon -->
-    <link rel="icon" href=".\img\toeic.jpg" />
+    <link rel="icon" href="..\img\toeic.jpg" />
     <!-- Required meta tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,10 +18,11 @@
     <!-- jquery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- Navigation dynamique -->
-    <script src="./js/nav_dyn.js"></script>
+    <script src="../js/nav_dyn.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- fichier css -->
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
     <!-- Bootstrap js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -38,7 +39,7 @@
 
       <h1 id="titre" class="row font_blue align-items-center mt-2 ">
       <!-- logo de l'entreprise -->
-      <img id="logo" src=".\img\toeic.jpg" width="70" height="70" class="align-items-center logo" >
+      <img id="logo" src="..\img\toeic.jpg" width="70" height="70" class="align-items-center logo" >
       <strong>&nbsp;TOEIC</strong></h1>
       <!-- bouton hamburger pour un menu responsif -->
       <a class="navbar-brand d-flex justify-content-end">  

@@ -18,7 +18,7 @@
 	 			<!-- une autre ligne qui sera donc en dessous de la premiere pour y placer l'image -->
 	 			<div class="row mt-5 align-content-center">
 	 				<div class="text-center">
-	 					<img  src="./img/team2.png" width="70%">
+	 					<img  src="../img/team2.png" width="70%">
 	 				
 	 				</div>
 	 			</div>
@@ -55,7 +55,7 @@
 		<div class="container mt-5 mb-5">
 			<div class="d-flex flex-row">
 				<div class="img-accueil col mr-3">
-					<img class=" img-fluid" src="./img/social.png" >
+					<img class=" img-fluid" src="../img/social.png" >
 				</div>
 				<div id="t1" class="d-flew col align-items-center ml-3 text-center">
 					
