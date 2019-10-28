@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3307
--- Généré le :  ven. 25 oct. 2019 à 17:09
+-- Généré le :  lun. 28 oct. 2019 à 11:09
 -- Version du serveur :  10.3.9-MariaDB
 -- Version de PHP :  7.2.10
 
@@ -155,6 +155,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `firstNameUser` varchar(25) NOT NULL,
   `mailUser` varchar(50) NOT NULL,
   `pwdUser` varchar(10) NOT NULL,
+  `isAdmin` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
