@@ -41,7 +41,7 @@
 				</div>
 				<div class="mt-2">
 					<label class="d-flex flex-row " for="spe">Spécialité</label>
-					<select  required class="form-control" name='spe' id='spe' required>
+					<select class="form-control" name='spe' id='spe' required>
 						<?php
 						if($spe){
 							foreach ($spe as $row) {
@@ -55,7 +55,7 @@
 				</div>
 				<div class="mt-2">
 					<label class="d-flex flex-row" for="year">Année</label>
-					<select  required class="form-control" name='year' id='year' required>
+					<select class="form-control" name='year' id='year' required>
 						<option value="3">3</option>
 						<option value="4">4</option>
 						<option value="5">5</option>
@@ -63,7 +63,7 @@
 				</div>
 				<div class="mt-2">
 					<label class="d-flex flex-row " for="grp">Groupe</label>
-					<select  required class="form-control" id='grp' name='grp' required>
+					<select class="form-control" id='grp' name='grp' required>
 						<?php
 						if($grp){
 							foreach ($grp as $row) {
