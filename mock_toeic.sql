@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 29 oct. 2019 à 01:18
+-- Généré le :  mar. 29 oct. 2019 à 11:03
 -- Version du serveur :  10.3.9-MariaDB
 -- Version de PHP :  7.2.10
 
@@ -147,6 +147,7 @@ CREATE TABLE IF NOT EXISTS `student` (
   `numStu` int(8) NOT NULL,
   `yearStu` int(1) NOT NULL,
   PRIMARY KEY (`FK_idUser`),
+  UNIQUE KEY `numStu` (`numStu`),
   KEY `FK_idGroup` (`FK_idGrp`),
   KEY `FK_idSpeciality` (`FK_idSpeciality`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -156,7 +157,8 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 INSERT INTO `student` (`FK_idUser`, `FK_idSpeciality`, `FK_idGrp`, `numStu`, `yearStu`) VALUES
-(2, 1, 1, 123, 3);
+(2, 1, 1, 123, 3),
+(6, 1, 2, 456, 3);
 
 -- --------------------------------------------------------
 
@@ -170,6 +172,14 @@ CREATE TABLE IF NOT EXISTS `teacher` (
   `isConfirm` tinyint(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`FK_idUser`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `teacher`
+--
+
+INSERT INTO `teacher` (`FK_idUser`, `isConfirm`) VALUES
+(4, 0),
+(5, 1);
 
 -- --------------------------------------------------------
 
@@ -198,14 +208,17 @@ CREATE TABLE IF NOT EXISTS `user` (
   `mailUser` varchar(50) NOT NULL,
   `pwdUser` varchar(10) NOT NULL,
   PRIMARY KEY (`idUser`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`idUser`, `nameUser`, `firstNameUser`, `mailUser`, `pwdUser`) VALUES
-(2, 'Azharhoussen', 'Salim', 'salim.azharhoussen@etu.umontpellier.fr', 'abon');
+(2, 'Azharhoussen', 'Salim', 'salim.azharhoussen@etu.umontpellier.fr', 'abon'),
+(4, 'Prof', 'Prof', 'prof.prof@umontpellier.fr', 'prof'),
+(5, 'prof2', 'prof2', 'prof2.prof2@umontpellier.fr', 'prof2'),
+(6, 'Azharhoussen', 'Maria', 'maria.azharhoussen@etu.umontpellier.fr', 'heouais');
 
 --
 -- Contraintes pour les tables déchargées
