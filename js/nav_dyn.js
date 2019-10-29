@@ -1,4 +1,3 @@
-
 /*fonction permettant d'avoir un menu dynamique lors qu'on défile une page*/
 $(document).ready(function() {
 	
