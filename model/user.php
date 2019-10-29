@@ -43,9 +43,9 @@
                 $isAdmin = true;
                 $res = mysqli_fetch_assoc(mysqli_query($this->co, $req)) or die("err_User5");
                 $this->isConfirm = implode('',$res);
-                if($this->isConfirm == 0){
+                if($this->isConfirm == '0'){
                     //Redirection to login page : Cannot login account need to be confirm by an admin
-                    $x=0;
+                    $x=3;
                     header('Location: ../controller/ctrl_login.php?x='.$x);
                 }
             }
@@ -83,7 +83,7 @@
             if(mysqli_num_rows($res) == 0){
                 $req = "INSERT INTO user(nameUser, firstNameUser, mailUser, pwdUser) VALUES('$this->name','$this->firstName','$this->mail','$this->pwd')";
                 mysqli_query($this->co, $req) or die("err_User6");
-                $id = mysqli_insert_id($link);
+                $id = mysqli_insert_id($this->co);
                 
                 $req = "INSERT INTO teacher(FK_idUser,isConfirm) VALUES($id,0)";
                 mysqli_query($this->co, $req) or die("err_User7");
@@ -146,6 +146,7 @@
 
         if($isAdmin){
             $_SESSION['adm'] = 1;
+            $_SESSION['confirm'] = $this->isConfirm;
         }
         else{
             $_SESSION['adm'] = 0;
