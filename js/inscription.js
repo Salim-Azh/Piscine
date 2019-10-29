@@ -26,8 +26,14 @@
 		else if (type.options[type.selectedIndex].value == 'Eleve') {
 			document.getElementById('envoi').disabled = false
 
-			profform.style.display = 'none'
-			studentform.style.display = 'block'
+			if(studentform.style.display =="none"){
+			//si c'est le cas on vérifie d'abord que la partie enseignant soit cachée elle aussi et si ce n'est pas le cas on la fait disparaitre
+			if (profform.style.display !="none") {
+				$(profform).toggle("slow");
+			}
+			//on affiche ensuite la partie eleve
+			$(studentform).toggle("slow");
+		}
 
 			stuinput.required=true
 			Array.prototype.forEach.call(stuselect, function(select) {
@@ -42,8 +48,14 @@
 				select.required=false
 			});
 
-			studentform.style.display = 'none'
-			profform.style.display = 'block'
+			if(profform.style.display =="none"){
+			//si c'est le cas on vérifie d'abord que la partie enseignant soit cachée elle aussi et si ce n'est pas le cas on la fait disparaitre
+				if (studentform.style.display !="none") {
+					$(studentform).toggle("slow");
+				}
+			//on affiche ensuite la partie eleve
+			$(profform).toggle("slow");
+		}
 		}
 
     })
