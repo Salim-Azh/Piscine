@@ -1,19 +1,26 @@
-function register(val){
-	// On vérifie que le select est sur etudiant et que celui ci est bien caché
-	if((val=="Eleve") && (document.getElementById('inscription_eleve').style.display =="none")){
-		//si c'est le cas on vérifie d'abord que la partie enseignant soit cachée elle aussi et si ce n'est pas le cas on la fait disparaitre
-		if (document.getElementById('inscription_enseignant').style.display !="none") {
-			$(document.getElementById('inscription_enseignant')).toggle("slow");
-		}
-		//on affiche ensuite la partie eleve
-		$(document.getElementById('inscription_eleve')).toggle("slow");
-	}
-	//meme principe pour enseignant
-	else if((val=="Enseignant") && (document.getElementById('inscription_enseignant').style.display =="none")){
+(function() { //IIFE :Immediately-Invoked Function Expression
+	document.getElementById('envoi').disabled = true
 
-		if (document.getElementById('inscription_eleve').style.display !="none") {
-			$(document.getElementById('inscription_eleve')).toggle("slow");
+	var type = document.getElementById('type')
+	var studentform = document.getElementById('stu_inscription')
+	var profform = document.getElementById('adm_inscription')
+
+	type.addEventListener('mouseup',function(e){
+        if(type.options[type.selectedIndex].value == 0){
+			studentform.style.display = 'none'
+			profform.style.display = 'none'
+			document.getElementById('envoi').disabled = true
 		}
-		$(document.getElementById('inscription_enseignant')).toggle("slow");
-	}
-}
+		else if (type.options[type.selectedIndex].value == 'Eleve') {
+			profform.style.display = 'none'
+			studentform.style.display = 'block'
+			document.getElementById('envoi').disabled = false
+		}
+		else if (type.options[type.selectedIndex].value == 'Enseignant') {
+			studentform.style.display = 'none'
+			profform.style.display = 'block'
+			document.getElementById('envoi').disabled = false
+		}
+
+    })
+})()

@@ -1,7 +1,5 @@
 
-<?php 
-      include("header.php");
-?>
+<?php include("header.php");?>
 <div class="container">
 <!-- on créé un conteneur pour espacer le contenu des bords de la fenetre -->
 	 <div class="container mt-5">
@@ -26,19 +24,17 @@
 	 		<!-- On créé une seconde colonne pour le formulaire de connexion -->
 	 		<div class="col pt-sm-5">
 
-
-			  
 			    <div class="text-center">
 
-				  <form method="POST" action="">
+				  <form method="POST" action="../controller/ctrl_connection.php">
 					
 				    <h3 class="mb-3 font-weight-normal">Se connecter</h3>
 
-				    <label for="inputEmail" class="sr-only">Adresse email</label>
-				    <input type="email" id="inputEmail" name="inputEmail" class="form-control mb-2" placeholder="Adresse email" required autofocus>
+				    <label for="mail" class="sr-only">Adresse email</label>
+				    <input type="email" id="mail" name="mail" class="form-control mb-2" placeholder="Adresse email" required autofocus>
 
-				    <label for="inputPassword" class="sr-only">Mot de passe</label>
-				    <input type="password" id="inputPassword" name="inputPassword" class="form-control mb-2" placeholder="Mot de passe" required>
+				    <label for="pwd" class="sr-only">Mot de passe</label>
+				    <input type="password" id="pwd" name="pwd" class="form-control mb-2" placeholder="Mot de passe" required>
 				    
 				   
 				    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Connexion">
@@ -68,9 +64,8 @@
 		
 	</div>
 
-<?php 
-      include("footer.php");
-?>
+<?php include("footer.php");?>
 
-
+</body>
+</html>
  	
