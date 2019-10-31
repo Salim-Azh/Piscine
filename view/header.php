@@ -45,46 +45,25 @@
         </button>
       </a>
 
-      <!-- lien de navigation -->
-      <div class="ml-5 mt-4 collapse navbar-collapse" id="collapse_target" >
-        <ul id="menu" class="navbar-nav mr-auto mb-4 ml-5 ">
-          <li>
-            <a class="mr-2 nav-link " href="../controller/ctrl_login.php" >SE CONNECTER</a>
-          </li>
-
-          <!-- Menu déroulant au passage de la souris peut être utile pour stats -->
           
-            
-            <li class="mr-2 nav-item " ><a   style= "text-decoration: none; outline:none;" class= "nav-link " href="#" id="menu"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-
-            
-            <ul class="shadow">
-              <li class="dropdown-item "><a href="./entrees.php" style= "text-decoration: none;" >
-              <h7>stats 1</h7>
-              </a></li>
-              <li class="dropdown-item "><a  href="./plats.php" style= "text-decoration: none;" href="">
-              <h7 >stats 2</h7>
-              </a></li>
-              <li class="dropdown-item "><a href="./dessert.php" style= "text-decoration: none;" href="">
-              <h7 >stats 3</h7>
-              </a> </li>
-            </ul>
           
-          </li>
-
-          <li>
-            <a class="mr-2 nav-link " href="../controller/ctrl_register.php" >CREER UN COMPTE</a>
-          </li>
-          
-          <!-- apparation de certaines fonctionnalités en fonction d'evnts -->
           <?php
-            if (isset($_SESSION['user'])){
-              echo "<li><a class=\"nav-link ml-5\" href=\"controleur/logout.php\">Se déconnecter</a></li>";
+          //on affiche des choix différent dans le header si il est connecté pas connecté admin ou étudiant
+           
+            if (isset($_SESSION['adm'])){
+              if ($_SESSION['adm'] == 1){
+                include_once("header_admin.php");
+              }elseif ($_SESSION['adm'] == 0) {
+                include_once("header_user.php");
+              }
+            }else{
+              // sinon pas connecter on affiche donc le "se connecter " et "s'enregistrer"
+              include_once("header1.php");
             }
           ?>
-        </ul>
         
-      </div>
+        
+      
     </nav>
 
                                               
