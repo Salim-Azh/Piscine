@@ -48,7 +48,7 @@
           
           
           <?php
-          //on affiche des choix différent dans le header si il est connecté pas connecté admin ou étudiant
+          //on affiche des choix différent dans le header si il est connecté / pas connecté / admin ou étudiant
            
             if (isset($_SESSION['adm'])){
               if ($_SESSION['adm'] == 1){
