@@ -1,4 +1,5 @@
 <?php
+    //if x varible exist and have content different of : 0, null or ''
     if (!empty($_GET['x']) && isset($_GET['x'])) {
         if ($_GET['x'] == 3) {
             echo "<div>Cannot login to your account need to be confirmed by an admin</div>";

@@ -25,7 +25,7 @@
 	 		<div class="col pt-sm-5">
 
 			    <div class="text-center">
-
+				<!-- connection form -->
 				  <form method="POST" action="../controller/ctrl_connection.php">
 					
 				    <h3 class="mb-3 font-weight-normal">Se connecter</h3>
@@ -39,7 +39,8 @@
 				   
 				    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Connexion">
 				 </form> 
-				    <div id="errorMessage-js"></div>  
+				 <!-- use to display message with JS -->
+				    <div id="errorMessage-js"></div>  <!-- code mort ? -->
 				    <p class=" mb-3 text-muted">&copy; 2019</p>
 				</div>
 			</div>
@@ -65,6 +66,8 @@
 	</div>
 
 <?php include("footer.php");?>
+
+
 
 </body>
 </html>
