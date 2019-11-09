@@ -32,7 +32,7 @@
   </head>
 
   <body>
-    <header>
+ 
       <nav id="nav" class="shadow-sm navbar navbar-expand-lg sticky-top navbar-light px-5">
 
         <h1 id="titre" class="row font_blue align-items-center mt-2 ">
@@ -66,7 +66,7 @@
           
         
       </nav>
-    </header>
+
                                               
                                                    
 
