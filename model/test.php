@@ -22,9 +22,9 @@
             $idpart2 = mysqli_insert_id($this->co);
 
 
-             for ($i=0; $i < 199 ; $i++) { 
+             for ($i=0; $i < 200 ; $i++) { 
              	$reponse= $this->tabChoix[$i];
-             	if ($i<99) {
+             	if ($i<100) {
              		$partie=$idpart1;
              	}else{
              		$partie=$idpart2;
