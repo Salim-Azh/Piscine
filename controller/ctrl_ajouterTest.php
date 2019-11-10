@@ -1,11 +1,17 @@
 <?php
 	require_once('../model/db.php');
-
-	if (isset($_POST['ajouter_test'])) {
-		//on insert
-		$insert_test = $DB->prepare('INSERT INTO test(nameTest) VALUES (:nameTest)');
-		$req_insert_test = $insert_test->execute(array( 'nameTest' => $_POST['nameTest'] )); 
-		$insert_test->closeCursor();
-		//on redirige
-		header('Location: ../Controller/ctrl_homePage.php'); 
+	require_once('../model/security.php');
+	require_once('../model/test.php');
+	$nameTest = Security::bdd($_POST['nameTest']);
+	$tabChoix = [];
+	
+	for ($i = 1; $i <= 200; $i++) {
+		array_push($tabChoix, Security::bdd($_POST[$i]));
 	}
+	echo ('<div class="spinner-border text-success" role="status">
+  		<span class="sr-only">Loading...</span>
+		</div>');
+	$test = new Test($tabChoix,$nameTest,$co);
+
+	
+   
