@@ -1,6 +1,6 @@
 <?php include_once("header.php"); ?>
 
-<div class=" mt-5 container">
+ <div class=" mt-5 container">
  	<div class="text-center">
  		<h1 class="font_blue">Créer un TEST TOEIC</h1>
  	</div>
@@ -46,11 +46,14 @@
 		</div>
 		
 		<div class="mt-5 mb-5 text-center">
-			<input type="submit" name="ajouter_test" class="btn btn-primary" value="Enregistrer le test" />
+			<input type="submit" name="ajouter_test" id="ajouter_test" class="btn btn-primary" value="Enregistrer le test" />
 		</div>
  	</form>
+ </div>
 
-
-</div>
 
  <?php include_once("footer.php");?>
+
+ <script src="../js/check_test_name.js"></script>
+ </body>
+ </html>
