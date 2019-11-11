@@ -4,10 +4,14 @@
  	<div class="text-center">
  		<h1 class="font_blue">Créer un TEST TOEIC</h1>
  	</div>
- 	<form method="POST" action="../controller/ctrl_ajouterTest.php">
+ 	<form method="POST" action="../controller/ctrl_creationTest.php">
 		<div >
 			<label for='nameTest' class="d-flex flex-row ">Nom du test</label>
 			<input type="text" class="form-control" placeholder="Nom du test" id='nameTest' name='nameTest'required />
+		</div>
+		<div class="d-flex justify-content-around">
+			<div class="mt-5 mb-1 text-center"><p class="font-weight-bold">Listening Section</p></div> 
+			<div class="mt-5 mb-1 text-center"><p class="font-weight-bold" >Reading Section</p></div> 
 		</div>
 	 	<div class="row">
 				<?php
@@ -16,10 +20,10 @@
 						echo "<div class=\"col\">";
 						for ($j = 0; $j < 50; $j++) {
 							$cpt += 1;
-							echo ('<div class="row" required>
-										<div><p class="mt-3 mr-2"> Q '.$cpt.' :</p></div>
-										<div class="form-check form-check-inline" >
-											<input class="form-check-input" name='.$cpt.' type="radio" id="rep1" value="a" checked >
+							echo ('<div class="row">
+										<div><p class="mt-3 mr-2"> Q'.$cpt.' :</p></div>
+										<div class="form-check form-check-inline">
+											<input class="form-check-input" name='.$cpt.' type="radio" id="rep1" value="a" checked required>
 											<label class="form-check-label" for="rep1">A</label>
 										</div>
 										<div class="form-check form-check-inline">
@@ -36,7 +40,7 @@
 										</div>
 									</div>');
 						}
-					   echo "</div>";
+					   	echo "</div>";
 					}
 				?>	
 		</div>

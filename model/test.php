@@ -4,20 +4,23 @@
 		protected $tabChoix;
 		protected $nameTest;
 		protected $part;
+
 		 function __construct($tabChoix,$nameTest,$co) {
 		 	require('db.php');
 		 	$this->co = $co;
 		 	$this->tabChoix=$tabChoix;
 		 	$this->nameTest=$nameTest;
 
+			$res = mysqli_query($this->co, "SELECT * From test Where nameTest='$this->nameTest'");
+
 		 	$req = "INSERT INTO test(nameTest) VALUES('$this->nameTest')";
             mysqli_query($this->co, $req) or die("erreur nameTest");
-            $id = mysqli_insert_id($this->co);
+            $idTest = mysqli_insert_id($this->co);
             
-            $req = "INSERT INTO part(FK_idTest, libPart) VALUES($id,'partie 1')";
+            $req = "INSERT INTO part(FK_idTest, libPart) VALUES($idTest,'partie 1')";
             mysqli_query($this->co, $req) or die("erreur partie");
             $idpart1 = mysqli_insert_id($this->co);
-            $req = "INSERT INTO part(FK_idTest, libPart) VALUES($id,'partie 2')";
+            $req = "INSERT INTO part(FK_idTest, libPart) VALUES($idTest,'partie 2')";
             mysqli_query($this->co, $req) or die("erreur partie");
             $idpart2 = mysqli_insert_id($this->co);
 
@@ -38,7 +41,7 @@
 
              }
              $x=1;
-             header('Location: ../controller/ctrl_homePage.php?x='.$x);
+             //header('Location: ../controller/ctrl_homePage.php?x='.$x);
 		 }
 	}
  ?>
