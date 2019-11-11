@@ -8,5 +8,8 @@ if (!empty($_GET['x']) && isset($_GET['x'])) {
     if ($_GET['x'] == 1) {
         echo '<div class="font_blue">Test créé avec succès !</div>';
     }
+    if ($_GET['x'] == 2) {
+        echo '<div class="font_blue">Nom de test déjà utilisé</div>';
+    }
 }
 include_once('../view/view_homePage.php');

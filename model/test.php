@@ -50,6 +50,10 @@
 						mysqli_query($this->co, "INSERT INTO question(FK_idTest, FK_idPart, idQuestion, correctAnswer) VALUES($idTest, 7, $i, '$reponse')") or die("err10 test.php");
 					}
 				}
+
+				//operation successful
+				$x=1;
+				header('Location: ../controller/ctrl_homePage.php?x='.$x);
 			}
 			else {
 				//this name is already used
@@ -57,9 +61,7 @@
 				header('Location: ../controller/ctrl_homePage.php?x='.$x);	
 			}
 			
-			//operation successful
-			$x=1;
-			header('Location: ../controller/ctrl_homePage.php?x='.$x);
+			
 		}
 	}
  ?>
