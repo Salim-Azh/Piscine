@@ -25,7 +25,7 @@
 		  </li>
 
 		  <li>
-		    <a class="mr-2 nav-link " href="./ctrl_addTest.php" >DEMARRER UN TEST</a>
+		    <a class="mr-2 nav-link " href="./ctrl_addTest.php" >GERER LES TESTS</a>
 		  </li>
 
     <li><a class=nav-link ml-5 href="./logout.php">Se déconnecter</a></li>

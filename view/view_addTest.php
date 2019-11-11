@@ -4,6 +4,7 @@
  	<div class="text-center">
  		<h1 class="font_blue">Créer un TEST TOEIC</h1>
  	</div>
+ 	<hr style="width: 50%;">
  	<form method="POST" action="../controller/ctrl_creationTest.php">
 		<div >
 			<label for='nameTest' class="d-flex flex-row ">Nom du test</label>
