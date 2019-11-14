@@ -5,7 +5,6 @@
 		<h1 class="font_blue">Gérer les TEST TOEIC</h1>
 	</div>
 	<hr style="width: 50%;">
-	<div class="col">
 		<div class="row">
 			<div class="col text-center">
 				<p class="font-weight-bold">Test</p>
@@ -34,22 +33,21 @@
 						$bg = "#FFFFFF";
 					}
 					$setBg = !$setBg;
-					echo ('<div id='.$id.' class="row" style="background-color: '.$bg.';">
+					echo ('<div id='.$id.' class="row text-center" style="background-color: '.$bg.';">
 								<div class="col text-center">
 									<p class="mt-2 mb-2">'.$lib.'</p>
 								</div>
-								<div class="col text-center ">
+								<div class="col">
 									<p class="mt-2 mb-2"><a href="#">Démarrer</a></p>
 								</div>
-								<div class="col text-center">
+								<div class="col">
 									<p class="mt-2 mb-2"><a href="#">Modifier</a></p>
 								</div>
-								<div class="col text-center">
+								<div class="col">
 									<p class="mt-2 mb-2"><a href="#" class="text-danger">Supprimer</a></p>
 								</div>
 							</div>');
 				}
 			}
 		?>
-	</div>
 </div>
