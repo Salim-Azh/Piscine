@@ -17,12 +17,10 @@
 		else {
 			require_once('../model/getTest.php');
 			$test = getTest();
-			include_once('../view/view_startTest.php');
+			header('Location: ../controller/ctrl_startTest.php');
 		}
 	}
 	else {
-
-		echo '<div class="font_blue">Erreur lors du démarrage du test</div>';
-		include_once('../view/view_homePage.php');
+		$x = 3;
+		header('Location: ../controller/ctrl_homePage.php?x='.$x);
 	}
-?>

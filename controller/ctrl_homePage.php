@@ -11,5 +11,8 @@ if (!empty($_GET['x']) && isset($_GET['x'])) {
     if ($_GET['x'] == 2) {
         echo '<div class="font_blue">Nom de test déjà utilisé</div>';
     }
+    if ($_GET['x'] == 3) {
+    	echo '<div class="font_blue">Erreur lors du démarrage du test</div>';
+    }
 }
 include_once('../view/view_homePage.php');
