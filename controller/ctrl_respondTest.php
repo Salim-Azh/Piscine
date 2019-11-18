@@ -12,6 +12,8 @@
 
 		if (mysqli_num_rows($res) != 0) {
 			$test = mysqli_fetch_all($res);
+			$idTest = $test[0][0];
+			$libTest = $test[0][1];
 			include_once('../view/view_respondTest.php');
 		}
 		else {

@@ -14,5 +14,8 @@ if (!empty($_GET['x']) && isset($_GET['x'])) {
     if ($_GET['x'] == 3) {
     	echo '<div class="font_blue">Erreur lors du démarrage du test</div>';
     }
+    if ($_GET['x'] == 4) {
+    	echo '<div class="font_blue">Réponses enregistrées</div>';
+    }
 }
 include_once('../view/view_homePage.php');

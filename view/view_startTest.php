@@ -22,6 +22,13 @@
 				foreach ($test as $row) {
 					$id = $row[0];
 					$lib = $row[1];
+					$note = getNoteTotale($id, $_SESSION['idUser']);
+					if ($note != '-') {
+						$disable = "disabled";
+					}
+					else {
+						$disable = "";
+					}
 					$bg = "";
 					if($setBg) {
 						$bg = "#CCE5FF";	
@@ -39,12 +46,12 @@
 								</div>
 								<div class="col text-center ">
 									<div class="p-1">
-										<p class="mt-2 mb-2"><a href="#">-</a></p>
+										<p class="mt-2 mb-2 font_blue">'.$note.'</p>
 									</div>
 								</div>
 								<div class="col text-center">
 									<div class="p-1">
-										<input type="submit" name="start" id="start" value="Démarrer" class="btn btn-primary mb-0" style="height:100%;">
+										<input type="submit" name="start" id="start" value="Démarrer" class="btn btn-primary mb-0" style="height:100%;" '.$disable.'>
 									</div>
 								</div>
 							</div>
