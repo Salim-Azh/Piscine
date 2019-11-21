@@ -17,5 +17,11 @@ if (!empty($_GET['x']) && isset($_GET['x'])) {
     if ($_GET['x'] == 4) {
     	echo '<div class="font_blue">Réponses enregistrées</div>';
     }
+    if ($_GET['x'] == 5) {
+        echo '<div class="font_blue">Erreur lors de la modification du test</div>';
+    }
+    if ($_GET['x'] == 6) {
+        echo '<div class="font_blue">Test mis à jour</div>';
+    }
 }
 include_once('../view/view_homePage.php');
