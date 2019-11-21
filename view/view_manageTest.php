@@ -33,24 +33,21 @@
 						$bg = "#FFFFFF";
 					}
 					$setBg = !$setBg;
-					echo('<div id='.$id.' class="row text-center" style="background-color: '.$bg.';">
-							<div class="col text-center">
-								<p class="mt-2 mb-2">'.$lib.'</p>
-							</div>
-							<div class="col">
-								<p class="mt-2 mb-2"><a href="#">Démarrer</a></p>
-							</div>
-							<div class="col">
-							<form method="post" action="../controller/ctrl_editTest.php">	
-								<button typ="button" class="btn btn-link" style="height:100%;">Modifier</button>
-								<input type="hidden" id="idTest" name="idTest" value="'.$id.'">
-							</form>
-							</div>
-							<div class="col">
-								<p class="mt-2 mb-2"><a href="#" class="text-danger">Supprimer</a></p>
-							</div>
-						</div>');
-					}
+					echo ('<div id='.$id.' class="row text-center" style="background-color: '.$bg.';">
+								<div class="col text-center">
+									<p class="mt-2 mb-2">'.$lib.'</p>
+								</div>
+								<div class="col">
+									<p class="mt-2 mb-2"><a href="#">Démarrer</a></p>
+								</div>
+								<div class="col">
+									<p class="mt-2 mb-2"><a href="#">Modifier</a></p>
+								</div>
+								<div class="col">
+									<p class="mt-2 mb-2"><a href="#" class="text-danger">Supprimer</a></p>
+								</div>
+							</div>');
+				}
 			}
 		?>
 </div>

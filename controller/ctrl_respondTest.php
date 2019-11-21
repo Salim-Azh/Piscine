@@ -17,6 +17,8 @@
 			include_once('../view/view_respondTest.php');
 		}
 		else {
+			require_once('../model/getTest.php');
+			$test = getTest();
 			header('Location: ../controller/ctrl_startTest.php');
 		}
 	}
