@@ -92,7 +92,7 @@
                 header('Location: ../controller/ctrl_login.php?x='.$x);
             }
  	 	 	//if the user exist
-            elseif (mysqli_num_rows($res) == 1) {
+            elseif (mysqli_num_rows($res) >= 1) {
                 //Redirection to register page : account is already in DB creation impossible
                 $alreadyExist = 1;
                 header('Location: ../controller/ctrl_register.php?x='.$alreadyExist);
@@ -109,8 +109,9 @@
             $this->yearStu = Security::bdd($param[7]);
             $this->idGrp = Security::bdd($param[8]);
 
-            //check if the user is already existing
-            $res = mysqli_query($this->co, "SELECT * FROM user where mailUser = '$this->mail' and pwdUser = '$this->pwd'") or die("err_User8");
+            //check if the user is already existing (mail or student number)
+            $res = mysqli_query($this->co, "SELECT * FROM user where mailUser = '$this->mail'") or die("err_User8");
+            $res2 = mysqli_query($this->co, "SELECT * FROM student where numStu = '$this->numStu'") or die("err_User8");
 
             //if not then add him to the database
             if(mysqli_num_rows($res) == 0){
@@ -125,7 +126,7 @@
                 header('Location: ../controller/ctrl_login.php?x='.$x);
             }
  	 	 	//if the user exist
-            elseif (mysqli_num_rows($res) == 1) {
+            elseif (mysqli_num_rows($res) >= 1 or mysqli_num_rows($res2)) {
                 //Redirection to register page : account is already in DB creation impossible
                 $alreadyExist = 1;
                 header('Location: ../controller/ctrl_register.php?x='.$alreadyExist);
