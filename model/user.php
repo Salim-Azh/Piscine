@@ -77,7 +77,7 @@
             $this->pwd = Security::bdd($param[4]);        
             
             //check if the user is already existing
-            $res = mysqli_query($this->co, "SELECT * FROM user where mailUser = '$this->mail' and pwdUser = '$this->pwd'") or die("err_User5");
+            $res = mysqli_query($this->co, "SELECT * FROM user where mailUser = '$this->mail'") or die("err_User5");
 
             //if not then add him to the database
             if(mysqli_num_rows($res) == 0){
