@@ -5,7 +5,7 @@
       <a class="mr-2 nav-link " href="../controller/ctrl_homePage.php" >PROFIL</a>
     </li>
     <li>
-      <a class="mr-2 nav-link " href="#" >STATISTIQUES</a>
+      <a class="mr-2 nav-link " href="../controller/ctrl_studentStat.php" >STATISTIQUES</a>
     </li>
    <li>
       <a class="mr-2 nav-link " href="../controller/ctrl_startTest.php" >DEMARRER UN TEST</a>
