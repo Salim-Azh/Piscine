@@ -14,6 +14,7 @@
 			<div class="col">
 				<label class="d-flex flex-row " for="spe">Spécialité</label>
 				<select class="form-control" name='speChoice' id='speChoice' required>
+					<option value="-">-</option>
 			<?php
 			if($spe){
 				foreach ($spe as $row) {
@@ -29,15 +30,18 @@
 				<div class="col">
 					<label class="d-flex flex-row" for="year">Année</label>
 							<select class="form-control" name='year' id='year' required>
+								<option value="-">-</option>
 								<option value="3">3</option>
 								<option value="4">4</option>
 								<option value="5">5</option>
 							</select>
 				</div>
 			</div>
+
 			<div class="text-center">
 				<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Rechercher" id='envoi'/></div>
 			</div>
+
 		</form>
 
 	<div class="container">
@@ -58,6 +62,7 @@
 			</div>
 
 			<?php 
+			
 			$setBg = true;
 			if (isset($name)) {
 				foreach ($name as $row) {
@@ -66,20 +71,20 @@
 						$bg = "#CCE5FF";	
 					}
 					else {
-						$bg = "#FFFFFF";
+						$bg = "#F4F4F4";
 					}
 					$setBg = !$setBg;
 					echo(
 
-						'<div onclick="document.location=\'#\'" class="mt-2 row text-center mx-auto" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
+						'<div onclick="document.location=\'#\'" class=" mt-2 shadow-sm row text-center mx-auto grossir" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
 								<div class="col text-center">
 									<div class="p-1">
-										<p class="mt-2 mb-2 ">'.$row[0][0].'</p>
+										<p class="mt-2 mb-2 ">'.$row[0].'</p>
 									</div>
 								</div>
 								<div class="col text-center ">
 									<div class="p-1">
-										<p class="mt-2 mb-2">'.$row[0][1].'</p>
+										<p class="mt-2 mb-2">'.$row[1].'</p>
 									</div>
 								</div>
 
@@ -88,7 +93,7 @@
 					);
 
 					
-	/*					echo $row[0][1];*/
+
 					
 					
 				}

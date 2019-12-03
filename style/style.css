@@ -10,6 +10,7 @@ footer {
     display : table-row;
     height: 50px; /* à titre d'exemple */
 }
+
  @media only screen and (max-width: 320px) {
             .back { 
                 background-image: url(smallback.jpg); 
@@ -141,6 +142,12 @@ footer {
   
 }
 
+
+/*css stats professeur*/
+.grossir:hover{
+    height: 110%;
+
+}
 
 @keyframes fadein {
     from {

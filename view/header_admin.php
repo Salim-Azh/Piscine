@@ -12,11 +12,9 @@
               <h7>par élèves</h7>
               </a></li>
               <li class="dropdown-item "><a  href="" style= "text-decoration: none;" href="">
-              <h7 >par groupe</h7>
+              <h7 >par classe / groupe</h7>
               </a></li>
-              <li class="dropdown-item "><a href="" style= "text-decoration: none;" href="">
-              <h7 >par classe</h7>
-              </a> </li>
+              
             </ul>
           
           </li>
