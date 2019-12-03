@@ -11,7 +11,7 @@
               <li class="dropdown-item "><a href="./ctrl_statsbystudent.php" style= "text-decoration: none;" >
               <h7>par élèves</h7>
               </a></li>
-              <li class="dropdown-item "><a  href="" style= "text-decoration: none;" href="">
+              <li class="dropdown-item "><a  href="./ctrl_statsbyclass.php" style= "text-decoration: none;" href="">
               <h7 >par classe / groupe</h7>
               </a></li>
               
