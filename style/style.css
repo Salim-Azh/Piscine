@@ -144,9 +144,20 @@ footer {
 
 
 /*css stats professeur*/
+.grossir{
+    -webkit-transition: all 0.5s ease; /* Safari et Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* Internet Explorer 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+}
 .grossir:hover{
-    height: 110%;
+    -webkit-transform:scale(1.03); /* Safari et Chrome */
+    -moz-transform:scale(1.03); /* Firefox */
+    -ms-transform:scale(1.03); /* Internet Explorer 9 */
+    -o-transform:scale(1.03); /* Opera */
 
+    transform:scale(1.03);
 }
 
 @keyframes fadein {
