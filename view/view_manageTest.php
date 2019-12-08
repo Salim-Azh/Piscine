@@ -35,7 +35,7 @@
 					$setBg = !$setBg;
 					echo('<div id='.$id.' class="row text-center" style="background-color: '.$bg.';">
 							<div class="col text-center">
-								<p class="mt-2 mb-2">'.$lib.'</p>
+								<p class="mt-2 mb-2 ">'.$lib.'</p>
 							</div>
 							<div class="col">
 								<p class="mt-2 mb-2"><a href="#">Démarrer</a></p>

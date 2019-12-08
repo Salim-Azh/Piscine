@@ -42,19 +42,19 @@
 										<div><p class="mt-3 mr-2"> Q'.$idQuestion.' :</p></div>
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" name='.$idQuestion.' type="radio" id="rep1" value="a" '.$checkedA.' required>
-											<label class="form-check-label" for="rep1">A</label>
+											<label class="form-check-label" >A</label>
 										</div>
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" name='.$idQuestion.' type="radio" id="rep2" value="b" '.$checkedB.'>
-											<label class="form-check-label" for="rep2">B</label>
+											<label class="form-check-label" >B</label>
 										</div>
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" name='.$idQuestion.' type="radio" id="rep3" value="c" '.$checkedC.'>
-											<label class="form-check-label" for="rep3">C</label>
+											<label class="form-check-label" >C</label>
 										</div>
 										<div class="form-check form-check-inline">
 											<input class="form-check-input" name='.$idQuestion.' type="radio" id="rep4" value="d" '.$checkedD.'>
-											<label class="form-check-label" for="rep4">D</label>
+											<label class="form-check-label" >D</label>
 										</div>
 									</div>');
 						
