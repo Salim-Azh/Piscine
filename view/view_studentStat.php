@@ -1,24 +1,16 @@
-<?php include_once("header.php");
-
-require_once("../jpgraph/src/jpgraph.php");
-require_once("../jpgraph/src/jpgraph_pie.php");
+<?php include_once("header.php"); ?>
 
 
-$donnees = array(5,2,3);
-$legends = array("Legende", "Là", "Ici");
-
-
-$graph = new PieGraph(500,500,'auto');
-
-//$graph->SetScale('linlin');
-$graph->title->Set("Coucou");
-$graph->SetBackgroundCountryFlag("5");
-$pieplot = new PiePlot($donnees);
-$pieplot->SetLegends($legends);
-//$pieplot->SetColor('red');
-//$pieplot->SetTheme('water');
-$graph->Add($pieplot);
-$graph->Stroke();
-
-
+<?php
+  $test = getAllNote($_SESSION['idUser']);
 ?>
+
+<div class="chart-container mt-5" style="position: relative; height:20vh; width:50vw">
+  <canvas id="myChart"></canvas>
+</div>
+
+<span style = "display:none" id= "notes"> <?php echo json_encode($test); ?></span>
+<script src="../js/graph.js"></script>
+
+
+
