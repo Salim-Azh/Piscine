@@ -29,6 +29,18 @@
 		 		<div class="col">
 		 			<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Changer ces informations" id='envoi'/></div>
 		 		</div>
+		 		<?php 
+		 			if(!isset($_SESSION["numStu"])){
+		 				echo ('
+		 					<form method="post" action="../controller/ctrl_valid_teacher.php">
+			 					<div class="col">
+			 						<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Valider un professeur" id="envoi"/></div>
+			 					</div>
+		 					</form>
+		 				');
+		 			}
+		 		 ?>
+		 		
 		 		<div class="col">
 		 			<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Changer de mot de passe" id='envoi'/></div>
 		 		</div>
