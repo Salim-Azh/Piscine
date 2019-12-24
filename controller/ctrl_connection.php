@@ -7,7 +7,7 @@
 
 	// form data recovery from the view
 	$mail = Security::bdd($_POST['mail']);
-	$pwd = Security::bdd($_POST['pwd']);
+	$pwd = sha1(Security::bdd($_POST['pwd']));
 
 	$exist = isUserInDB($mail,$pwd); //is the user in the data base
 	

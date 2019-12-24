@@ -74,7 +74,7 @@
             $this->name = Security::bdd($param[1]);
             $this->firstName = Security::bdd($param[2]);
             $this->mail = Security::bdd($param[3]);
-            $this->pwd = Security::bdd($param[4]);        
+            $this->pwd = sha1(Security::bdd($param[4]));   
             
             //check if the user is already existing
             $res = mysqli_query($this->co, "SELECT * FROM user where mailUser = '$this->mail'") or die("err_User5");
@@ -139,7 +139,7 @@
         //function connection call in User constructor : start user SESSION and store session variables
         session_start();
         $_SESSION['co'] = $this->co;
-        $_SESSION['pwd'] = $this->pwd;
+        $_SESSION['pwd'] = sha1($this->pwd);
         $_SESSION['mail'] = $this->mail; 
         $_SESSION['name'] = $this->name; 
         $_SESSION['firstName'] = $this->firstName;
@@ -159,7 +159,7 @@
     }
 
     public function modifPwd($newPwd) {
-        $this->pwd = Security::bdd($newPwd);
+        $this->pwd = sha1(Security::bdd($newPwd));
         $modifPwd = "UPDATE user SET pwdUser = '$this->pwd' and loginUser = '$this->login'";
         mysqli_query($this->co, $modifPwd);
     }

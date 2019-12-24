@@ -10,15 +10,20 @@
 
 				'<h4 class="mt-5">Bonjour '.$_SESSION["firstName"].'</h4>
 				');
-				if(isset($_SESSION["numStu"])){
+				
 					echo('
 						<ul class="list-group list-group-flush">
-						  	<li class="list-group-item">Votre numéro étudiant est : '.$_SESSION["numStu"].'</li>
-						  	<li class="list-group-item">Vous êtes groupe '.$_SESSION["idGrp"].'</li>
-							<li class="list-group-item">Votre mail est : '.$_SESSION["mail"].'</li>
-						</ul>'
-					);
-				}
+						  	<li class="list-group-item">Votre mail est : '.$_SESSION["mail"].'</li>
+						  ');
+						  	if(isset($_SESSION["numStu"])){
+							echo('	
+								<li class="list-group-item">Votre numéro étudiant est : '.$_SESSION["numStu"].'</li>
+							  	<li class="list-group-item">Vous êtes groupe '.$_SESSION["idGrp"].'</li>
+								
+							</ul>
+							');
+							}
+				
 					
 				
 
