@@ -3,24 +3,14 @@
 	require_once('../model/db.php');
 	require_once('../model/security.php');
 	require_once('../model/security.php');
-
+	require_once('../model/getTestName.php');
 
 	$idTest = Security::bdd($_POST['id']);
-	if (is_integer($idTest)) {
-		$req = "SELECT idTest, nameTest FROM test WHERE idTest=$idTest";
-		$res = mysqli_query($co, $req) or die('err_getTestToAnswer');
+	$libTest = getTestName($idTest);
 
-		if (mysqli_num_rows($res) != 0) {
-			$test = mysqli_fetch_all($res);
-			$idTest = $test[0][0];
-			$libTest = $test[0][1];
-			include_once('../view/view_respondTest.php');
-		}
-		else {
-			header('Location: ../controller/ctrl_startTest.php');
-		}
+	if ($libTest) {
+		include_once('../view/view_respondTest.php');
 	}
 	else {
-		$x = 3;
-		header('Location: ../controller/ctrl_homePage.php?x='.$x);
+		header('Location: ../controller/ctrl_startTest.php');
 	}
