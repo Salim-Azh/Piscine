@@ -42,7 +42,7 @@
 							</div>
 							<div class="col">
 							<form method="post" action="../controller/ctrl_editTest.php">	
-								<button type="button" class="btn btn-link" style="height:100%;">Modifier</button>
+								<input type="submit" value="Modifier" id= "modify" name="modify" class="btn btn-link" style="height:100%;">
 								<input type="hidden" id="idTest" name="idTest" value="'.$id.'">
 							</form>
 							</div>
