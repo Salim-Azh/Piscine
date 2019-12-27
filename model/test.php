@@ -10,13 +10,25 @@
 		 	$this->tabChoix=$tabChoix;
 		 	$this->nameTest=$nameTest;
 
+		 	
+
 			$res = mysqli_query($this->co, "SELECT * From test Where nameTest='$this->nameTest'") or die("err1 test.php");
 			//the test nameTest is not in the database
 			if(mysqli_num_rows($res)==0){
+				//code insertion and creation
+				$caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+				$longueurMax = strlen($caracteres);
+				$chaineAleatoire = '';
+				for ($i = 0; $i < 7; $i++)
+				{
+					$chaineAleatoire .= $caracteres[rand(0, $longueurMax - 1)];
+				}
+
 				// test insertion
-				$req = "INSERT INTO test(nameTest) VALUES('$this->nameTest')";
+				$req = "INSERT INTO test(nameTest,Code) VALUES('$this->nameTest','$chaineAleatoire')";
 				mysqli_query($this->co, $req) or die("err2 test.php");
 				$idTest = mysqli_insert_id($this->co);
+				
 
 				//parts creation
 				for ($i=1; $i < 8 ; $i++) { 

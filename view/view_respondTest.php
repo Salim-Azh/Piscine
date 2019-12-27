@@ -43,3 +43,39 @@
 		<?php echo('<input type="hidden" name="idTest" id="idTest" value='.$idTest.'>'); ?>
 	</form>
 </div>
+
+
+<script type="text/javascript">
+	
+	setTimeout(function(){ document.location.href="../controller/ctrl_homePage.php"; }, 3600000);
+
+	var cpt = 3600 ;
+var x ;
+ 
+function decompte()
+{
+	
+    if(cpt>=0)
+    {
+        if(cpt>1)
+        {
+            var sec = " secondes.";
+        } else {
+            var sec = " seconde.";
+        }
+        minutes = Math.floor(cpt/60);
+		secondes = cpt%minutes;
+        document.getElementById("Chrono").innerHTML = "Fin du test dans " + minutes + " minutes " + secondes + sec ;
+        cpt-- ;
+        x = setTimeout("decompte()",1000) ;
+    }
+    else
+    {
+        clearTimeout(x) ;
+    }
+}
+
+
+</script>
+
+<?php include("footer.php");?>

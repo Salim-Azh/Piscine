@@ -12,4 +12,11 @@
     </li>
     <li><a class="nav-link" ml-5 href="../controller/logout.php">Se déconnecter</a></li>
  </ul>
+
+ <!-- AFFICHAGE DU CHRONO LORSQU'UN TEST EST DEMARRE -->
+ <body onload="decompte();">
+ 
+    <div class="" id="Chrono"></div>
+ 
+  </body>
 </div>

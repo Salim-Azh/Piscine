@@ -6,5 +6,11 @@
 	// get database data about tests
     // will be used in the view
 	$test = getTest();
+	
+	if (isset($_POST['Code']) and (isset($_POST['lib'])) ){
+		$code = ($_POST['Code']);
+		$libel = ($_POST['lib']);
+	
+	}
 
 	include_once('../view/view_manageTest.php');

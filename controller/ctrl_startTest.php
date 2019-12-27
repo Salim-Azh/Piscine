@@ -7,4 +7,9 @@
 
 	$test = getTest();
 
+	if (isset($_POST['code']) ){
+		$code = ($_POST['code']);
+	
+	}
+
 	include_once('../view/view_startTest.php');

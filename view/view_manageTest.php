@@ -25,6 +25,7 @@
 				foreach ($test as $row) {
 					$id = $row[0];
 					$lib = $row[1];
+					$Code = $row[2];
 					$bg = "";
 					if($setBg) {
 						$bg = "#CCE5FF";	
@@ -34,11 +35,18 @@
 					}
 					$setBg = !$setBg;
 					echo('<div id='.$id.' class="row text-center" style="background-color: '.$bg.';">
+							
 							<div class="col text-center">
 								<p class="mt-2 mb-2 ">'.$lib.'</p>
 							</div>
 							<div class="col">
-								<p class="mt-2 mb-2"><a href="#">Démarrer</a></p>
+			
+							<form method="post" action="../controller/ctrl_manageTest.php">	
+								<input type="submit" value="Ouvrir le test aux élèves" id= "launch" name="launch" class="btn btn-link" style="height:100%;">
+								<input type="hidden" id="Code" name="Code" value="'.$Code.'">
+								<input type="hidden" id="lib" name="lib" value="'.$lib.'">
+
+							</form>
 							</div>
 							<div class="col">
 							<form method="post" action="../controller/ctrl_editTest.php">	
@@ -52,5 +60,10 @@
 						</div>');
 					}
 			}
+
+			if (isset($_POST['Code']) and (isset($_POST['lib'])) ){
+				echo "<h5 class='text-center font_blue mt-5'>Voici le code du test ".$libel." : ".$code." </h5>";
+			}
 		?>
 </div>
+<?php include("footer.php");?>

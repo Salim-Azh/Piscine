@@ -1,8 +1,19 @@
 <?php include("header.php");  ?>
 
-<div class="mt-5 container">
+<div class="mt-5 container mb-5">
 	<div class="text-center">
 		<h1 class="font_blue">Démarrer un TEST</h1>
+	</div>
+	
+		<form method="post" action="../controller/ctrl_startTest.php">	
+			<div class="col text-center">
+			<p class=" text-center">Entrez le code pour ouvrir un test :</p>
+			<input class="" type="input" style="width: 40%;" id="code" name="code" value="">
+			<div class="text-center">
+				<input type="submit" value="Valider " id= "launch" name="launch" class="btn btn-primary mt-2 mb-5  " style="width: 30%;" >	
+			</div>
+			
+		</form>
 	</div>
 	<hr style="width: 50%;">
 	<div class="row text-center mx-auto mt-2" style="width: 60%;">
@@ -22,12 +33,13 @@
 				foreach ($test as $row) {
 					$id = $row[0];
 					$lib = $row[1];
+					$Code = $row[2];
 					$note = getNoteTotale($id, $_SESSION['idUser']);
-					if ($note != '-') {
-						$disable = "disabled";
-					}
-					else {
-						$disable = "";
+					$disable = "disabled";
+					if (isset($_POST['code'])){
+						if ($Code == $code){
+							$disable = "";
+						}
 					}
 					$bg = "";
 					if($setBg) {
@@ -61,3 +73,5 @@
 			}
 	?>
 	</form>
+</div>
+<?php include("footer.php");?>
