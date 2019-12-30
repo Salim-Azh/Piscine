@@ -103,7 +103,7 @@
             $this->name = Security::bdd($param[1]);
             $this->firstName = Security::bdd($param[2]);
             $this->mail = Security::bdd($param[3]);
-            $this->pwd = Security::bdd($param[4]);
+            $this->pwd = sha1(Security::bdd($param[4]));
             $this->numStu = Security::bdd($param[5]);
             $this->idSpe = Security::bdd($param[6]);
             $this->yearStu = Security::bdd($param[7]);
