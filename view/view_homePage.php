@@ -47,7 +47,12 @@
 		 		 ?>
 		 		
 		 		<div class="col">
-		 			<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Changer de mot de passe" id='envoi'/></div>
+		 			
+		 			<form method="post" action="../controller/ctrl_changePassword.php">
+			 					<div class="col">
+			 						<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Changer de mot de passe" id="envoi"/></div>
+			 					</div>
+		 					</form>
 		 		</div>
 		 	</div>
 		 </div>

@@ -8,7 +8,7 @@
 		<form method="post" action="../controller/ctrl_startTest.php">	
 			<div class="col text-center">
 			<p class=" text-center">Entrez le code pour ouvrir un test :</p>
-			<input class="" type="input" style="width: 40%;" id="code" name="code" value="">
+			<input class="" type="input" style="width: 40%;" id="code" name="code" value="" required>
 			<div class="text-center">
 				<input type="submit" value="Valider " id= "launch" name="launch" class="btn btn-primary mt-2 mb-5  " style="width: 30%;" >	
 			</div>
