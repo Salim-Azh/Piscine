@@ -31,9 +31,7 @@
 		 ?>
 		 <div class="container text-center mt-5">
 		 	<div class="row">
-		 		<div class="col">
-		 			<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Changer ces informations" id='envoi'/></div>
-		 		</div>
+		 		
 		 		<?php 
 		 			if(!isset($_SESSION["numStu"])){
 		 				echo ('
