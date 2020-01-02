@@ -45,6 +45,7 @@
 								<input type="submit" value="Ouvrir le test aux élèves" id= "launch" name="launch" class="btn btn-link" style="height:100%;">
 								<input type="hidden" id="Code" name="Code" value="'.$Code.'">
 								<input type="hidden" id="lib" name="lib" value="'.$lib.'">
+								<input type="hidden" id="idTest" name="idTest" value="'.$id.'">
 
 							</form>
 							</div>
