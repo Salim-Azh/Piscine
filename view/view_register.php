@@ -37,7 +37,7 @@
 			<div id="stu_inscription" style="display:none">
 				<div class="mt-2">
 					<label class="d-flex flex-row" for="numStu">Numéro étudiant</label>
-					<input type="text" class="form-control" placeholder="Votre numéro étudiant" id='numStu' name='numStu' required />
+					<input type="text" class="form-control" placeholder="Votre numéro étudiant" id='numStu' name='numStu' maxlength="8" required />
 				</div>
 				<div class="mt-2">
 					<label class="d-flex flex-row " for="spe">Spécialité</label>
