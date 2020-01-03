@@ -7,10 +7,6 @@
 	<hr style="width: 50%;">
 	<form method="post" action="../controller/ctrl_searchStudent.php">
 		<div class="row mt-5">
-
-		
-			
-	
 			<div class="col">
 				<label class="d-flex flex-row " for="spe">Spécialité</label>
 				<select class="form-control" name='speChoice' id='speChoice' required>
@@ -74,9 +70,10 @@
 						$bg = "#F4F4F4";
 					}
 					$setBg = !$setBg;
+					echo($row[0]);
 					echo(
 
-						'<div onclick="document.location=\'#\'" class=" mt-2 shadow-sm row text-center mx-auto grossir" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
+						'<div onclick="document.location=\'../controller/ctrl_studentStat.php?prenom='.$row[0].'&nom='.$row[1].'\'" class=" mt-2 shadow-sm row text-center mx-auto grossir" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
 								<div class="col text-center">
 									<div class="p-1">
 										<p class="mt-2 mb-2 ">'.$row[0].'</p>
@@ -91,11 +88,6 @@
 
 						</div>'
 					);
-
-					
-
-					
-					
 				}
 			}
 

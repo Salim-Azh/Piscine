@@ -1,8 +1,10 @@
 <?php  
-	function getAllNote($idUser) {
+	function getAllNote($prenom, $nom, $type) {
 		require('db.php');
-		$rep = "SELECT FK_idPart, score, FK_idTest, date.dateTest FROM fill INNER JOIN mock_toeic.date ON fill.FK_idDate = date.idDate WHERE FK_idUser = $idUser";
-		$res = mysqli_query($co, $rep) or die('err_getNoteTotale');
+
+		$rep = "SELECT FK_idPart, score, FK_idTest, date.dateTest FROM fill INNER JOIN mock_toeic.date ON fill.FK_idDate = date.idDate INNER JOIN mock_toeic.user ON FK_idUser = idUser WHERE firstNameUser = \"$prenom\" AND nameUser = \"$nom\"";
+		
+        $res = mysqli_query($co, $rep) or die('err_getAllNote');
 
 		if(mysqli_num_rows($res)!=0){            
             $note = mysqli_fetch_all($res);
@@ -71,7 +73,13 @@
                     $noteReading = 495 - (97 - $noteReading) * 5;
                 }
 
-                array_push($listeNote, $tab[$i][0], array($noteListening, $noteReading));
+                if($type == 0){
+                    array_push($listeNote, $tab[$i][0], array($noteListening, $noteReading));
+                } elseif ($type == 1) {
+                    array_push($listeNote, $tab[$i][0], array($noteListening, 0));
+                } elseif ($type == 2) {
+                    array_push($listeNote, $tab[$i][0], array(0, $noteReading));
+                }
             }
             return $listeNote;   
         } else {
