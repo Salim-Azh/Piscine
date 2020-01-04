@@ -41,34 +41,43 @@
 							$disable = "";
 						}
 					}
-					$bg = "";
-					if($setBg) {
-						$bg = "#CCE5FF";	
+					if ($note!="-" or (isset($_POST['code']) and ($Code == $code))){
+						$bg = "";
+						if($setBg) {
+							$bg = "#CCE5FF";	
+						}
+						else {
+							$bg = "#FFFFFF";
+						}
+						$setBg = !$setBg;
+					
+						echo ('<form method="post" action="../controller/ctrl_respondTest.php">
+								<div class="row text-center mx-auto" style="background-color: '.$bg.'; width: 60%;">
+									<div class="col text-center">
+										<div class="p-1">
+											<p class="mt-2 mb-2">'.$lib.'</p>
+										</div>
+									</div>
+									<div class="col text-center ">
+										<div class="p-1">
+											<p class="mt-2 mb-2 font_blue">'.$note.'</p>
+										</div>
+									</div>
+									<div class="col text-center">
+
+										<div class="p-1">
+										');
+										if ($note=="-"){
+											echo ('<input type="submit" name="start"  value="Démarrer" class="btn btn-primary mb-0" style="height:50%;" > ');
+										}else{
+											echo('<span class="badge badge-pill badge-info mt-2">Terminé</span>');
+										}
+										echo ('</div>
+									</div>
+								</div>
+								<input type="hidden"  name="id" value='.$id.'>
+								</form>');
 					}
-					else {
-						$bg = "#FFFFFF";
-					}
-					$setBg = !$setBg;
-					echo ('<form method="post" action="../controller/ctrl_respondTest.php">
-							<div class="row text-center mx-auto" style="background-color: '.$bg.'; width: 60%;">
-								<div class="col text-center">
-									<div class="p-1">
-										<p class="mt-2 mb-2">'.$lib.'</p>
-									</div>
-								</div>
-								<div class="col text-center ">
-									<div class="p-1">
-										<p class="mt-2 mb-2 font_blue">'.$note.'</p>
-									</div>
-								</div>
-								<div class="col text-center">
-									<div class="p-1">
-										<input type="submit" name="start" id="start" value="Démarrer" class="btn btn-primary mb-0" style="height:100%;" '.$disable.'>
-									</div>
-								</div>
-							</div>
-							<input type="hidden" id="id" name="id" value='.$id.'>
-							</form>');
 				}
 			}
 	?>
