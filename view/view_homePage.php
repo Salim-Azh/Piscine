@@ -34,9 +34,9 @@
 		 		
 		 		<?php 
 		 			if(!isset($_SESSION["numStu"])){
-		 				echo ('
-		 					<form method="post" action="../controller/ctrl_valid_teacher.php">
-			 					<div class="col">
+		 				echo ('<div class="col">
+		 						<form method="post" action="../controller/ctrl_valid_teacher.php">
+			 					
 			 						<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Valider un professeur" id="envoi"/></div>
 			 					</div>
 		 					</form>
