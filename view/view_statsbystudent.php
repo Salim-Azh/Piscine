@@ -70,7 +70,7 @@
 						$bg = "#F4F4F4";
 					}
 					$setBg = !$setBg;
-					echo($row[0]);
+					
 					echo(
 
 						'<div onclick="document.location=\'../controller/ctrl_studentStat.php?prenom='.$row[0].'&nom='.$row[1].'\'" class=" mt-2 shadow-sm row text-center mx-auto grossir" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
