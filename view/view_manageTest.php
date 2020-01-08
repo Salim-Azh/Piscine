@@ -63,7 +63,7 @@
 			}
 
 			if (isset($_POST['Code']) and (isset($_POST['lib'])) ){
-				echo "<h5 class='text-center font_blue mt-5'>Voici le code du test ".$libel." : ".$code." </h5>";
+				echo "<h5 class='text-center font_blue mt-5 mb-5'>Voici le code du test ".$libel." : ".$code." </h5>";
 			}
 		?>
 </div>

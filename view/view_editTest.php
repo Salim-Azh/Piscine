@@ -5,7 +5,7 @@
  		<h1 class="font_blue">Modifier un TEST TOEIC</h1>
  	</div>
  	<hr style="width: 50%;">
- 	<form method="POST" action="../controller/ctrl_saveEditTest.php">
+ 	<form method="POST" action="../controller/ctrl_saveEditTest.php" onsubmit="this.valider_rep.disabled = true;">
 		<div >
 			<label for='nameTest' class="d-flex flex-row ">Nom du test</label>
 			<?php echo('<input type="text" class="form-control" value="'.$testName.'" placeholder="Nom du test" id="nameTest" name="nameTest"required />'); ?>

@@ -5,7 +5,7 @@
  		<h1 class="font_blue">Créer un TEST TOEIC</h1>
  	</div>
  	<hr style="width: 50%;">
- 	<form method="POST" action="../controller/ctrl_creationTest.php">
+ 	<form method="POST" action="../controller/ctrl_creationTest.php" onsubmit="this.valider_rep.disabled = true;">
 		<div >
 			<label for='nameTest' class="d-flex flex-row ">Nom du test</label>
 			<input type="text" class="form-control" placeholder="Nom du test" id='nameTest' name='nameTest'required />
