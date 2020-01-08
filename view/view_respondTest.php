@@ -5,15 +5,15 @@
 		<?php echo('<h1 class="font_blue">TEST : '.$libTest.' </h1>'); ?>
 	</div>
 	<hr style="width: 50%;">
-	<form method="POST" action="../controller/ctrl_correctionTest.php" onsubmit="this.valider_rep.disabled = true;">
+	<form method="POST" action="../controller/ctrl_correctionTest.php" style="margin-left: 15%;" onsubmit="this.valider_rep.disabled = true;">
 		<div class="row">
 			<?php
 				$cpt = 0;
-				for ($i=0; $i < 4; $i++) { 
-					echo "<div class=\"col\">";
-					for ($j = 0; $j < 50; $j++) {
+				for ($i=0; $i < 50; $i++) { 
+					echo "<div class=\"row\">";
+					for ($j = 0; $j < 4; $j++) {
 						$cpt += 1;
-						echo ('<div class="row">
+						echo ('<div class="col">
 									<div><p class="mt-3 mr-2"> Q'.$cpt.' :</p></div>
 									<div class="form-check form-check-inline">
 										<input class="form-check-input" name='.$cpt.' type="radio" id="rep1" value="a" checked required>
@@ -49,7 +49,7 @@
 	
 	setTimeout(function(){ document.location.href="../controller/ctrl_homePage.php"; }, 3600000);
 
-	var cpt = 3600 ;
+	var cpt = 7200 ;
 var x ;
  
 function decompte()
@@ -57,15 +57,16 @@ function decompte()
 	
     if(cpt>=0)
     {
-        if(cpt>1)
+        /*if(cpt>1)
         {
             var sec = " secondes.";
         } else {
             var sec = " seconde.";
-        }
-        minutes = Math.floor(cpt/60);
+        }*/
+        heures = Math.floor(cpt/3600);
+        minutes = Math.floor((cpt-heures*3600)/60);
 		secondes = cpt%minutes;
-        document.getElementById("Chrono").innerHTML = "Fin du test dans " + minutes + " minutes " + secondes + sec ;
+        document.getElementById("Chrono").innerHTML = heures + " h " + minutes + " min " + secondes + "sec" ;
         cpt-- ;
         x = setTimeout("decompte()",1000) ;
     }
