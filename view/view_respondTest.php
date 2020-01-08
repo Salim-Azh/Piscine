@@ -5,7 +5,7 @@
 		<?php echo('<h1 class="font_blue">TEST : '.$libTest.' </h1>'); ?>
 	</div>
 	<hr style="width: 50%;">
-	<form method="POST" action="../controller/ctrl_correctionTest.php">
+	<form method="POST" action="../controller/ctrl_correctionTest.php" onsubmit="this.valider_rep.disabled = true;">
 		<div class="row">
 			<?php
 				$cpt = 0;
