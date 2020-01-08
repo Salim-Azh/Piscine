@@ -12,13 +12,13 @@
 				<select class="form-control" name='speChoice' id='speChoice' required>
 					<option value="-">-</option>
 			<?php
-			if($spe){
-				foreach ($spe as $row) {
-					$id=$row[0];
-					$lib=$row[1];
-					echo "<option value='".Security::html($id)."'>".Security::html($lib)."</option>";
+				if($spe){
+					foreach ($spe as $row) {
+						$id=$row[0];
+						$lib=$row[1];
+						echo "<option value='".Security::html($id)."'>".Security::html($lib)."</option>";
+					}
 				}
-			}
 
 			?>
 			</select>

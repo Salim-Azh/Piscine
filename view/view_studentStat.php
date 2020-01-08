@@ -39,6 +39,7 @@
 			</div>
 
 			<span style = "display:none" id= "notes"> <?php echo json_encode($res); ?></span>
+
 			<script src="../js/graph.js"></script>
 		</div>
 
