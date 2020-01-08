@@ -40,12 +40,13 @@
 				}
 			?>
 		</div>
-		<div class="mt-5 mb-5 text-center">
+		
+</div>
+	<div class="mt-5 mb-5 text-center">
 			<input type="submit" name="valider_rep" id="valider_rep" class="btn btn-primary" value="Valider les réponses" />
 		</div>
 		<?php echo('<input type="hidden" name="idTest" id="idTest" value='.$idTest.'>'); ?>
 	</form>
-</div>
 
 
 <script type="text/javascript">
