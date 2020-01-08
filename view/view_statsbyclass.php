@@ -7,7 +7,7 @@
 	<hr style="width: 50%;">
 	
 
-	<form method="post" action="../controller/ctrl_groupStat.php">
+	<form method="post" action="../controller/ctrl_statsbyclass.php">
 		<div class="row mt-5">
 
 			<div class="col">
@@ -52,6 +52,23 @@
 					?>
 				</select>
 			</div>
+
+			<div class="col">
+				<label class="d-flex flex-row " for="grp">Parties</label>
+				<select class="form-control" id='part' name='part' required>
+					<option value="0">Total</option>
+					<option value="-1">listening</option>
+					<option value="-2">writing</option>
+					<option value="1">part 1</option>
+					<option value="2">part 2</option>
+					<option value="3">part 3</option>
+					<option value="4">part 4</option>
+					<option value="5">part 5</option>
+					<option value="6">part 6</option>
+					<option value="7">part 7</option>
+				</select>
+			</div>
+
 		</div>			
 
 		<div class="text-center">
@@ -60,6 +77,52 @@
 
 	</form>
 
+
+	<?php
+
+		if(isset($_POST['speChoice'])) {
+			//on récupère les valeurs du formalaire
+			if(isset($_POST['speChoice'])) {
+	            $spe = $_POST['speChoice'];
+	        }
+
+	        if(isset($_POST['year'])) { 
+		        $year = $_POST['year']; 
+	        } 
+
+	        if(isset($_POST['grp'])) {
+	            $grp = $_POST['grp'];
+	            if ($grp == 'tous'); {
+	            	$grp = 0;
+	            }
+	        }
+	        
+	        $part = 0;
+	        if(isset($_POST['part'])) {
+	        	$part = $_POST['part'];
+	        } else {
+	        	$part  = 0;
+	        }
+
+			//$part permet de savoir quelles partie du toeic on récupère
+			$res = getGroupNote($spe, $year, $grp, $part);
+
+			if($res != NULL) {
+				echo('<div class="text-center">
+						<h1 class="font_blue">Moyennes des bonnes réponses des '. $spe . '' . $year . ' : GP'  . $grp . ' </h1>
+							<div class="text-center">
+								<div  class="chart-container mt-5 " style="position: relative; margin-left: 10%; height:40%; width:70%">
+					  				<canvas id="myChart"></canvas>
+								</div>
+								<span style = "display:none" id= "notes">' . json_encode($res) . '</span>
+								<script src="../js/graph2.js"></script>
+							</div>
+					</div>');
+			}
+		}
+
+    ?>
+</div>
 
 </div>
 

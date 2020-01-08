@@ -17,9 +17,11 @@
 		if(isset($_POST['all'])) { 
             $type = 0;
         }
+
         if(isset($_POST['listening'])) { 
             $type = 1; 
-        } 
+        }
+         
         if(isset($_POST['writing'])) { 
             $type = 2;
         }

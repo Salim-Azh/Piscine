@@ -12,20 +12,37 @@ $(document).ready(function() {
     tab = tab.replace(/\"/g, "");
     tab = tab.split(',');
 
-    
-    console.log(tab);
 
     var date = [];
     var note = [];
     var compteur = 0;
 
+    var max = 0;
     //transforme le string récupéré en tableau de données pour le graph
     for(i = 0; i< tab.length; i += 2){
-        console.log("Nouvelle iterations");
         date[compteur] = tab[i];
         note[compteur++] = tab[i+1];
-        console.log(note);
-//        note[compteur++] = parseInt(tab[i+1]) + parseInt(tab[i+2]); //parseInt pour convertir les nombre sous forme de string en Int
+        if (tab[i+1] > max) {
+            max = tab[i+1];
+        }
+    }
+
+    if (max > 100) {
+        max = 200;
+    } else if (max > 54) {
+        max = 100;
+    } else if (max > 39) {
+        max = 54;
+    } else if (max > 30) {
+        max = 39;
+    } else if (max > 25) {
+        max = 30;
+    } else if (max > 16) {
+        max = 25;
+    } else if (max > 6) {
+        max = 16;
+    } else {
+        max = 6;
     }
 
 
@@ -52,7 +69,7 @@ $(document).ready(function() {
             yAxes: [{
                 ticks: {
                     suggestedMin: 0,
-                    suggestedMax: 990
+                    suggestedMax: max
                 }
             }]
         }

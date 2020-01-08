@@ -4,6 +4,8 @@
 	require_once('../model/security.php');
 	require_once('../model/getSpeciality.php');
 	require_once('../model/getGroup.php');
+	require_once('../model/getGroupNote.php');
+
 //get speciality in db
 	$spe = getSpeciality();
 	$grp = getGroup();

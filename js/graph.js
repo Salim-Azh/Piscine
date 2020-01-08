@@ -15,7 +15,6 @@ $(document).ready(function() {
 
     //transforme le string récupéré en tableau de données pour le graph
     for(i = 0; i< tab.length; i += 3){
-        console.log("Nouvelle iteration");
         date[compteur] = tab[i];
         note[compteur++] = parseInt(tab[i+1]) + parseInt(tab[i+2]); //parseInt pour convertir les nombre sous forme de string en Int
     }

@@ -2,7 +2,12 @@
 	function getAllNote($prenom, $nom, $type) {
 		require('db.php');
 
-		$rep = "SELECT FK_idPart, score, FK_idTest, date.dateTest FROM fill INNER JOIN mock_toeic.date ON fill.FK_idDate = date.idDate INNER JOIN mock_toeic.user ON FK_idUser = idUser WHERE firstNameUser = \"$prenom\" AND nameUser = \"$nom\"";
+		$rep = "SELECT FK_idPart, score, FK_idTest, nameTest FROM fill 
+            INNER JOIN mock_toeic.date ON fill.FK_idDate = date.idDate 
+            INNER JOIN mock_toeic.user ON FK_idUser = idUser
+            INNER JOIN test ON idTest = FK_idTest 
+            WHERE firstNameUser = \"$prenom\" 
+                AND nameUser = \"$nom\" ";
 		
         $res = mysqli_query($co, $rep) or die('err_getAllNote');
 
