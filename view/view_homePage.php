@@ -1,7 +1,7 @@
 <?php 
 	include_once("header.php");
  ?>
-<div class="container">
+<div class="container mb-5">
 	<div class="mt-5 text-center">
 		<h1 class="font_blue">Mon Profil</h1>
 		<hr style="width: 50%;">

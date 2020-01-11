@@ -2,7 +2,7 @@
 session_start();
 require_once('../model/db.php');
 require_once('../model/security.php');
-
+if(isset($_SESSION['co'])){
 
 if (!empty($_GET['x']) && isset($_GET['x'])) {
     if ($_GET['x'] == 1) {
@@ -25,3 +25,6 @@ if (!empty($_GET['x']) && isset($_GET['x'])) {
     }
 }
 include_once('../view/view_homePage.php');
+}else{
+     header('Location: ../index.php');
+}

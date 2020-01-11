@@ -2,7 +2,7 @@
 	include_once("header.php");
  ?>
 
-<div class="container">
+<div class="container mb-5">
 	<div class="text-center mt-5 mb-5">
 		<h1 class="font_blue">Valider un professeur</h1>
 	</div>

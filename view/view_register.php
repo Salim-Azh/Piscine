@@ -81,7 +81,7 @@
 				<small>Ce compte devra être validé par un enseignant</small>
 			</div>			
 			
-			<div class="mt-4" ><input type="submit" name="envoi" value="Envoyer" id='envoi'/></div>
+			<div class="mt-4" ><input class="btn btn-light" type="submit" name="envoi" value="Envoyer" id='envoi'/></div>
 			
     	</form>
 	</div>

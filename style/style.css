@@ -121,14 +121,17 @@ footer {
 /*css pour la partie register / inscription*/
 
 /*css du footer pas de footer pour le moment*/
+.font-footer{
+    color: white;
+}
 .footer_liens{
-    color : grey;
+    color : #F0E7D8;
 
 }
 .footer_liens:hover{
     text-decoration: none;
      transition: all ease .2s;
-    color: #031513;
+    color: black;
 
 }
 .footer_logos:hover{

@@ -2,7 +2,7 @@
 <?php include("header.php");?>
  	<div class="container">
 		<!-- on créé un conteneur pour espacer le contenu des bords de la fenetre -->
-		<div class="container mt-5">
+		<div class="container mt-5 mb-5>
 			<!-- on créé un nouveau conteneur row qui est une ligne dont les composants sont alignés au centre -->
 			<div class="row align-items-center">
 				<!-- dans cette ligne on place une colonne -->

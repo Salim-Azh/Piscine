@@ -1,6 +1,6 @@
 <?php include("header.php");  ?>
 
-<div class="mt-5 container">
+<div class="mt-5 container mb-5">
 	<div class="text-center">
 		<h1 class="font_blue">Statistiques par classe / groupe</h1>
 	</div>
