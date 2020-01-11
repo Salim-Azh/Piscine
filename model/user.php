@@ -139,7 +139,7 @@
         //function connection call in User constructor : start user SESSION and store session variables
         session_start();
         $_SESSION['co'] = $this->co;
-        $_SESSION['pwd'] = sha1($this->pwd);
+        $_SESSION['pwd'] = $this->pwd;
         $_SESSION['mail'] = $this->mail; 
         $_SESSION['name'] = $this->name; 
         $_SESSION['firstName'] = $this->firstName;

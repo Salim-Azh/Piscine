@@ -72,3 +72,20 @@
 	array_push($rep, $repPart7);
 
 	$fill = new Fill($idTest, $_SESSION['idUser'], $rep, $co);
+
+
+	//on modifie le code du test lorsque le premier élève à terminé
+		$caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		$longueurMax = strlen($caracteres);
+		$chaineAleatoire = '';
+		for ($i = 0; $i < 7; $i++)
+		{
+			$chaineAleatoire .= $caracteres[rand(0, $longueurMax - 1)];
+		}
+			$code = $chaineAleatoire;
+			
+		$req = "UPDATE test SET Code = '$chaineAleatoire' Where idTest = $idTest ";
+			mysqli_query($co, $req) or die("err Changement code test");
+
+		
+	

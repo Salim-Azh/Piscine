@@ -36,7 +36,7 @@
 			echo('<h1 class="font_blue">Statistiques de '.$nom.' '.$prenom.'</h1>');
 		?>
 		<div class="text-center">
-			<div  class="chart-container mt-5 " style="position: relative; margin-left: 10%; height:40%; width:70%">
+			<div  class="chart-container mt-5 " style="position: relative; margin-left: 13%; height:40%; width:70%">
 			  <canvas id="myChart"></canvas>
 			</div>
 
@@ -45,10 +45,10 @@
 			<script src="../js/graph.js"></script>
 		</div>
 
-		<form method="post">
-	 		<input type="submit" class="btn btn-primary mb-0" style="height:100%;" name="all" value="listening & writing"/> 
-			<input type="submit" class="btn btn-primary mb-0" style="height:100%;" name="listening" value="listening"/> 
-			<input type="submit" class="btn btn-primary mb-0" style="height:100%;" name="writing" value="writing"/> 
+		<form class="mt-3" method="post">
+	 		<input type="submit" class="btn btn-info mb-0 mr-2" style="height:100%;" name="all" value="listening & writing"/> 
+			<input type="submit" class="btn btn-info mb-0 mr-2" style="height:100%;" name="listening" value="listening"/> 
+			<input type="submit" class="btn btn-info mb-0 mr-2" style="height:100%;" name="writing" value="writing"/> 
     	</form>
 
 	</div>
