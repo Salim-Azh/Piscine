@@ -29,6 +29,12 @@
 
 		
 	}
+
+	if (isset($_POST['Supprimer'])) {
+		$id = $_POST['Supprimer'];
+		$req = "DELETE FROM test WHERE idTest = $id";
+		mysqli_query($co, $req) or die("err Suppression");
+	}
 				
 
 	include_once('../view/view_manageTest.php');

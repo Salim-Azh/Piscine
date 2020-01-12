@@ -31,10 +31,10 @@
 				
 
 				//parts creation
-				for ($i=1; $i < 8 ; $i++) { 
-					$req = "INSERT INTO part(idPart, FK_idTest, libPart) VALUES($i , $idTest,'Partie ".$i."')";
-					mysqli_query($this->co, $req) or die("err3 test.php");
-				}
+				//for ($i=1; $i < 8 ; $i++) { 
+				//	$req = "INSERT INTO part(idPart, FK_idTest, libPart) VALUES($i , $idTest,'Partie ".$i."')";
+				//	mysqli_query($this->co, $req) or die("err3 test.php");
+				//}
 
 				//questions insertion
 				for ($i=1; $i < 201 ; $i++) { 
