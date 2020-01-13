@@ -8,10 +8,6 @@
 		$mdp0 = $_POST['mdp0'];
 		$mdp1 = $_POST['mdp1'];
 		$mdp2 = $_POST['mdp2'];
-		var_dump($_SESSION['pwd']);
-		var_dump(sha1($mdp0));
-		var_dump(sha1(sha1($mdp0)));
-		var_dump($mdp0);
 		if ($mdp1 != $mdp2 or $_SESSION['pwd'] != sha1($mdp0)){
 			echo ('<p class="font_blue"> LES MOTS DE PASSE NE CORRESPONDENT PAS</p>');
 		}else{
