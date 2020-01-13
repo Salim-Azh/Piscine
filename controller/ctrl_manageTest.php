@@ -34,6 +34,7 @@
 		$id = $_POST['Supprimer'];
 		$req = "DELETE FROM test WHERE idTest = $id";
 		mysqli_query($co, $req) or die("err Suppression");
+		echo('<meta http-equiv="refresh" content="0;URL=../controller/ctrl_manageTest.php">');
 	}
 				
 

@@ -63,7 +63,6 @@
 							</div>
 							<div class="col">
 								<form method="post" action="../controller/ctrl_manageTest.php" onsubmit="return confirm(\'Etes-vous sur de vouloir suprimer ce TOEIC ? Cela entrainera la suppression de toutes les questions et de toutes les notes liées à ce test\');">
-
 									<input type="submit" value="Supprimer" id= "suppr" name="launch" class="btn btn-link text-danger" style="height:100%;">
 									<input type="hidden" id="Supprimer" name="Supprimer" value="'.$id.'">
 								</form>

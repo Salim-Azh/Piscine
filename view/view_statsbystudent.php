@@ -58,22 +58,19 @@
 				</div>
 			</div>
 
-			<?php 
-			
-			$setBg = true;
-			if (isset($name)) {
-				foreach ($name as $row) {
-					$bg = "";
-					if($setBg) {
-						$bg = "#CCE5FF";	
-					}
-					else {
-						$bg = "#F4F4F4";
-					}
-					$setBg = !$setBg;
-					
-					echo(
-						'<div onclick="document.location=\'../controller/ctrl_studentStat.php?prenom='.$row[0].'&nom='.$row[1].'\'" class=" mt-2 shadow-sm row text-center mx-auto grossir" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
+			<?php 			
+				$setBg = true;
+				if (isset($name)) {
+					foreach ($name as $row) {
+						$bg = "";
+						if($setBg) {
+							$bg = "#CCE5FF";	
+						} else {
+							$bg = "#F4F4F4";
+						}
+						$setBg = !$setBg;
+						
+						echo('<div onclick="document.location=\'../controller/ctrl_studentStat.php?prenom='.$row[0].'&nom='.$row[1].'\'" class=" mt-2 shadow-sm row text-center mx-auto grossir" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
 								<div class="col text-center">
 									<div class="p-1">
 										<p class="mt-2 mb-2 ">'.$row[0].'</p>
@@ -84,14 +81,12 @@
 										<p class="mt-2 mb-2">'.$row[1].'</p>
 									</div>
 								</div>
-
-
-						</div>'
-					);
+							</div>'
+						);
+					}
 				}
-			}
-
 			 ?>
+
 			</div>
 		</div>
 	</div>

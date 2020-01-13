@@ -102,13 +102,14 @@
 	        } else {
 	        	$part  = 0;
 	        }
+	        
 
 			//$part permet de savoir quelles partie du toeic on récupère
 			$res = getGroupNote($spe, $year, $grp, $part);
 
 			if($res != NULL) {
 				echo('<div class="text-center">
-						<h1 class="font_blue mt-5">Moyennes des bonnes réponses des '. $speciality[0][0] . '' . $year . ' : GP'  . $grp . ' </h1>
+						<h1 class="font_blue mt-5">Moyennes des bonnes réponses des '. $speciality[0][0] . '' . $year . ' : Gpr '  . $grp . ' </h1>
 							<div class="text-center">
 								<div  class="chart-container mt-5 " style="position: relative; margin-left: 10%; height:40%; width:70%">
 					  				<canvas id="myChart"></canvas>
@@ -123,8 +124,6 @@
 		}
 
     ?>
-</div>
-
 </div>
 
 <?php include("footer.php");?>
