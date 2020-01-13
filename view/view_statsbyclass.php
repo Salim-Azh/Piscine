@@ -83,9 +83,8 @@
 		if(isset($_POST['speChoice'])) {
 			//on récupère les valeurs du formalaire
 			if(isset($_POST['speChoice'])) {
-	            $spe = $_POST['speChoice'];
-	        }
-
+				$spe = $_POST['speChoice'];
+			}
 	        if(isset($_POST['year'])) { 
 		        $year = $_POST['year']; 
 	        } 
@@ -109,7 +108,7 @@
 
 			if($res != NULL) {
 				echo('<div class="text-center">
-						<h1 class="font_blue">Moyennes des bonnes réponses des '. $spe . '' . $year . ' : GP'  . $grp . ' </h1>
+						<h1 class="font_blue mt-5">Moyennes des bonnes réponses des '. $speciality[0][0] . '' . $year . ' : GP'  . $grp . ' </h1>
 							<div class="text-center">
 								<div  class="chart-container mt-5 " style="position: relative; margin-left: 10%; height:40%; width:70%">
 					  				<canvas id="myChart"></canvas>
@@ -118,6 +117,8 @@
 								<script src="../js/graph2.js"></script>
 							</div>
 					</div>');
+			} else {
+				echo('<div class="text-center mt-5"><h1 class="font_blue"> Aucun TOEIC n\' a été passé</h1></div>');
 			}
 		}
 
