@@ -40,6 +40,7 @@
 						$bg = "#FFFFFF";
 					}
 					$setBg = !$setBg;
+
 					echo('<div id='.$id.' class="row text-center" style="background-color: '.$bg.';">
 							
 							<div class="col text-center">
@@ -62,13 +63,15 @@
 							</form>
 							</div>
 							<div class="col">
-								<p class="mt-2 mb-2"><a href="#" class="text-danger">Supprimer</a></p>
+								<form method="post" action="../controller/ctrl_manageTest.php" onsubmit="return confirm(\'Etes-vous sur de vouloir suprimer ce TOEIC ? Cela entrainera la suppression de toutes les questions et de toutes les notes liées à ce test\');">
+								<input type="submit" value="Supprimer" id= "suppr" name="launch" class="btn btn-link" style="height:100%;">
+								<input type="hidden" id="Supprimer" name="Supprimer" value="'.$id.'">
 							</div>
 						</div>');
 					}
 			}
 
-			
+
 		?>
 </div>
 <?php include("footer.php");?>

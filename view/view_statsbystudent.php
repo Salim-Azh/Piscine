@@ -1,12 +1,13 @@
 <?php include("header.php");  ?>
 
-<div class="mt-5 container mb-5">
+<div class="mt-5 container">
 	<div class="text-center">
 		<h1 class="font_blue">Statistiques par élève</h1>
 	</div>
 	<hr style="width: 50%;">
 	<form method="post" action="../controller/ctrl_searchStudent.php">
 		<div class="row mt-5">
+			
 			<div class="col">
 				<label class="d-flex flex-row " for="spe">Spécialité</label>
 				<select class="form-control" name='speChoice' id='speChoice' required>
@@ -21,7 +22,7 @@
 				}
 
 			?>
-			</select>
+				</select>
 				</div>
 				<div class="col">
 					<label class="d-flex flex-row" for="year">Année</label>
@@ -72,7 +73,6 @@
 					$setBg = !$setBg;
 					
 					echo(
-
 						'<div onclick="document.location=\'../controller/ctrl_studentStat.php?prenom='.$row[0].'&nom='.$row[1].'\'" class=" mt-2 shadow-sm row text-center mx-auto grossir" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
 								<div class="col text-center">
 									<div class="p-1">
