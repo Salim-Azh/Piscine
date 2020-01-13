@@ -13,8 +13,8 @@
         //cas des notes de toeic complètes
         if ($part == 0) {
     
-    		$rep = "SELECT nameTest, AVG(t.scoreSum) FROM (
-                SELECT FK_idTest, FK_idPart, SUM(score) as scoreSum, nameTest FROM student
+    		$rep = "SELECT CONCAT(nameTest, ' : ', dateTest), AVG(t.scoreSum) FROM (
+                SELECT FK_idTest, FK_idPart, SUM(score) as scoreSum, nameTest, dateTest FROM student
                     INNER JOIN user ON idUser = FK_idUser 
                     INNER JOIN fill ON fill.FK_idUser = student.FK_idUser 
                     INNER JOIN mock_toeic.date ON idDate = FK_idDate 
@@ -31,14 +31,14 @@
         //cas du listening (part 1,2,3,4)
         } elseif ($part == -1 ) {
             
-            $rep = "SELECT nameTest, AVG(t.scoreSum) FROM (
-                SELECT FK_idTest, FK_idPart, SUM(score) as scoreSum, nameTest FROM student
+            $rep = "SELECT CONCAT(nameTest, ' : ', dateTest), AVG(t.scoreSum) FROM (
+                SELECT FK_idTest, FK_idPart, SUM(score) as scoreSum, nameTest, dateTest FROM student
                     INNER JOIN user ON idUser = FK_idUser 
                     INNER JOIN fill ON fill.FK_idUser = student.FK_idUser 
                     INNER JOIN mock_toeic.date ON idDate = FK_idDate
                     INNER JOIN test ON idTest = FK_idTest
                     WHERE FK_idSpeciality = \"$spe\" 
-                        AND FK_idGrp" . $group . " 
+                        AND FK_idGrp" . $group . "
                         AND yearStu = \"$annee\"
                         AND FK_idPart IN (1,2,3,4) 
                     GROUP BY FK_idTest, FK_idDate ) 
@@ -50,8 +50,8 @@
         //cas du writing (part 5,6,7)
         } elseif ($part == -2 ) {
             
-            $rep = "SELECT nameTest, AVG(t.scoreSum) FROM (
-                SELECT FK_idTest, FK_idPart, SUM(score) as scoreSum, nameTest FROM student
+            $rep = "SELECT CONCAT(nameTest, ' : ', dateTest), AVG(t.scoreSum) FROM (
+                SELECT FK_idTest, FK_idPart, SUM(score) as scoreSum, nameTest, dateTest FROM student
                     INNER JOIN user ON idUser = FK_idUser 
                     INNER JOIN fill ON fill.FK_idUser = student.FK_idUser 
                     INNER JOIN mock_toeic.date ON idDate = FK_idDate 
@@ -67,7 +67,7 @@
 
         //cas ou la partie est sélectionnée
         } else {
-            $rep = "SELECT nameTest, AVG(score) FROM student 
+            $rep = "SELECT CONCAT(nameTest, ' : ', dateTest), AVG(score) FROM student 
                 INNER JOIN user ON idUser = FK_idUser 
                 INNER JOIN fill ON fill.FK_idUser = student.FK_idUser 
                 INNER JOIN mock_toeic.date ON idDate = FK_idDate

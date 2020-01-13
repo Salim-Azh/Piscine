@@ -34,13 +34,13 @@
   		<form id="contact" method="post" action="../controller/ctrl_contact_treatment.php">
           <fieldset>
             <div class="form-group">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Votre mail">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Votre mail" required>
             </div>
           </fieldset>
         
           <fieldset>
             <div class="form-group">
-              <textarea class="form-control" id="message" name="message" rows="2" placeholder="Votre message"></textarea>
+              <textarea class="form-control" id="message" name="message" rows="2" placeholder="Votre message" required></textarea>
               <div class="mt-2"><input class=" btn btn-light" type="submit" name="envoi" value="Envoyer"></div>
             </div>
           </fieldset>
