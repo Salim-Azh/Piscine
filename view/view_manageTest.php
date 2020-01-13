@@ -5,6 +5,12 @@
 		<h1 class="font_blue">Gérer les TEST TOEIC</h1>
 	</div>
 	<hr style="width: 50%;">
+	<?php 
+		if (isset($_POST['Code']) and (isset($_POST['lib'])) ){
+						echo "<h5 class='text-center font_blue mt-5 mb-5'>Voici le code du test ".$libel." : ".$code." </h5>";
+					}
+	 ?>
+	
 		<div class="row">
 			<div class="col text-center">
 				<p class="font-weight-bold">Test</p>
@@ -62,9 +68,7 @@
 					}
 			}
 
-			if (isset($_POST['Code']) and (isset($_POST['lib'])) ){
-				echo "<h5 class='text-center font_blue mt-5 mb-5'>Voici le code du test ".$libel." : ".$code." </h5>";
-			}
+			
 		?>
 </div>
 <?php include("footer.php");?>
