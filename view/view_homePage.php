@@ -19,10 +19,19 @@
 							echo('	
 								<li class="list-group-item">Votre numéro étudiant est : '.$_SESSION["numStu"].'</li>
 							  	<li class="list-group-item">Vous êtes groupe '.$_SESSION["idGrp"].'</li>
+							  	<li class="list-group-item">Vous êtes connecté en tant qu\'étudiant</li>
 								
-							</ul>
+							
 							');
+							}else{
+								echo('	
+							  	<li class="list-group-item">Vous êtes connecté en tant que professeur</li>
+								
+							
+							');
+
 							}
+							echo ('</ul>');
 				
 					
 				
