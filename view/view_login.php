@@ -56,7 +56,7 @@
 					</div>
 					<div id="t1" class="d-flew col align-items-center ml-3 text-center">
 						
-						<p>John draw real poor on call my from. May she mrs furnished discourse extremely. Ask doubt noisy shade guest did built her him. Ignorant repeated hastened it do. Consider bachelor he yourself expenses no. Her itself active giving for expect vulgar months. Discovery commanded fat mrs remaining son she principle middleton neglected. Be miss he in post sons held. No tried is defer do money scale rooms. 
+						<p>JLe toeic est une certification permettant de tester le niveau d’anglais de toutes les personnes se présentant à l’examen. Une note finale est attribuée /995, constitué de 495 points sur une compréhension orale ( listening ) et 495 points sur une compréhension écrite ( reading ). Polytech est engagé dans l’apprentissage de l’anglais, c’est pourquoi il est obligatoire de posséder le TOEIC pour être diplômé d’ingénieur. Pour que votre TOEIC soit validé, vous devez obtenir la note de 775/900, et le TOEIC vous sera valide pendant toute votre durée de scolarité à Polytech, et 2 ans après.  Ce site vous permettra de passer différents TOEIC mis en ligne par vos professeurs, et de pouvoir consulter vos résultats sous forme de statistiques.
 						</p>
 						
 					</div>
