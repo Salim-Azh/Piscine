@@ -8,7 +8,7 @@
 	var stuinput = studentform.querySelector('input')				//student number input
 	var stuselect = studentform.querySelectorAll('select')			//all the select in student form
 
-	type.addEventListener('mouseup',function(e){
+	type.addEventListener('change',function(e){
 		/* Debug
 		*
 		*	console.log(stuinput)

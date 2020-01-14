@@ -7,8 +7,6 @@
     <!-- Required meta tags -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- fait fonctionner ajax -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- font test -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <!-- font roboto -->
@@ -36,10 +34,10 @@
  
       <nav id="nav" class="shadow-sm navbar navbar-expand-lg sticky-top navbar-light px-5">
 
-        <h1 id="titre" class="row font_blue align-items-center mt-2 ">
+        <h2 id="titre" class="row font_blue align-items-center mt-2 ">
         <!-- logo de l'entreprise -->
         <img id="logo" src="..\img\toeic.jpg" width="70" height="70" class="align-items-center logo" >
-        <strong>&nbsp; TOEIC</strong></h1>
+        <strong>&nbsp; TOEIC</strong></h2>
         <!-- bouton hamburger pour un menu responsif -->
         <a class="navbar-brand d-flex justify-content-end">  
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_target" aria-controls="collapse_target" aria-expanded="false" aria-label="Toggle navigation">

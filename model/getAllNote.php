@@ -2,15 +2,10 @@
 	function getAllNote($prenom, $nom, $type) {
 		require('db.php');
 
-		$rep = "SELECT FK_idPart, score, FK_idTest, nameTest, dateTest FROM fill 
-            INNER JOIN mock_toeic.date ON fill.FK_idDate = date.idDate 
-            INNER JOIN mock_toeic.user ON FK_idUser = idUser
-            INNER JOIN test ON idTest = FK_idTest
-            WHERE firstNameUser = \"$prenom\" 
-                AND nameUser = \"$nom\" ";
+		$rep = "SELECT FK_idPart, score, FK_idTest, nameTest, dateTest FROM fill INNER JOIN id12234610_mock_toeic.date ON fill.FK_idDate = date.idDate INNER JOIN id12234610_mock_toeic.user ON FK_idUser = idUser INNER JOIN test ON idTest = FK_idTest WHERE firstNameUser = '$prenom' AND nameUser = '$nom' ";
 		
         $res = mysqli_query($co, $rep) or die('err_getAllNote');
-
+        
 		if(mysqli_num_rows($res)!=0){            
             $note = mysqli_fetch_all($res);
             

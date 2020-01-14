@@ -17,7 +17,7 @@
                 SELECT FK_idTest, FK_idPart, SUM(score) as scoreSum, nameTest, dateTest FROM student
                     INNER JOIN user ON idUser = FK_idUser 
                     INNER JOIN fill ON fill.FK_idUser = student.FK_idUser 
-                    INNER JOIN mock_toeic.date ON idDate = FK_idDate 
+                    INNER JOIN id12234610_mock_toeic.date ON idDate = FK_idDate 
                     INNER JOIN test ON test.idTest = FK_idTest
                     WHERE FK_idSpeciality = \"$spe\" 
                         AND FK_idGrp " .$group . " 
@@ -35,7 +35,7 @@
                 SELECT FK_idTest, FK_idPart, SUM(score) as scoreSum, nameTest, dateTest FROM student
                     INNER JOIN user ON idUser = FK_idUser 
                     INNER JOIN fill ON fill.FK_idUser = student.FK_idUser 
-                    INNER JOIN mock_toeic.date ON idDate = FK_idDate
+                    INNER JOIN id12234610_mock_toeic.date ON idDate = FK_idDate
                     INNER JOIN test ON idTest = FK_idTest
                     WHERE FK_idSpeciality = \"$spe\" 
                         AND FK_idGrp" . $group . "
@@ -54,7 +54,7 @@
                 SELECT FK_idTest, FK_idPart, SUM(score) as scoreSum, nameTest, dateTest FROM student
                     INNER JOIN user ON idUser = FK_idUser 
                     INNER JOIN fill ON fill.FK_idUser = student.FK_idUser 
-                    INNER JOIN mock_toeic.date ON idDate = FK_idDate 
+                    INNER JOIN id12234610_mock_toeic.date ON idDate = FK_idDate 
                     INNER JOIN test ON idTest = FK_idTest
                     WHERE FK_idSpeciality = \"$spe\"
                         AND FK_idGrp" . $group . " 
@@ -70,7 +70,7 @@
             $rep = "SELECT CONCAT(nameTest, ' : ', dateTest), AVG(score) FROM student 
                 INNER JOIN user ON idUser = FK_idUser 
                 INNER JOIN fill ON fill.FK_idUser = student.FK_idUser 
-                INNER JOIN mock_toeic.date ON idDate = FK_idDate
+                INNER JOIN id12234610_mock_toeic.date ON idDate = FK_idDate
                 INNER JOIN test ON idTest = FK_idTest 
                 WHERE FK_idSpeciality = \"$spe\" 
                     AND FK_idGrp ". $group ." 
