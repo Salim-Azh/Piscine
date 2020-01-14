@@ -27,3 +27,5 @@
 <meta http-equiv="refresh" content="7;url=../controller/ctrl_homePage.php"> 
 
 <?php include("footer.php"); ?>
+</body>
+</html>

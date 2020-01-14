@@ -6,25 +6,25 @@
 	</div>
 	<hr style="width: 50%;">
 	<?php 
-		if (isset($_POST['Code']) and (isset($_POST['lib'])) ){
-						echo "<h5 class='text-center font_blue mt-5 mb-5'>Voici le code du test ".$libel." : ".$code." </h5>";
-					}
+		if (isset($_POST['Code']) && isset($_POST['lib']) ){
+			echo "<h5 class='text-center font_blue mt-5 mb-5'>Voici le code du test ".$libel." : ".$code." </h5>";
+		}
 	 ?>
 	
-		<div class="row">
-			<div class="col text-center">
-				<p class="font-weight-bold">Test</p>
-			</div>
-			<div class="col text-center">
-				<p class="font-weight-bold">Démarrer</p>
-			</div>
-			<div class="col text-center">
-				<p class="font-weight-bold">Modifier</p>
-			</div>
-			<div class="col text-center">
-				<p class="font-weight-bold">Supprimer</p>
-			</div>
+	<div class="row">
+		<div class="col text-center">
+			<p class="font-weight-bold">Test</p>
 		</div>
+		<div class="col text-center">
+			<p class="font-weight-bold">Démarrer</p>
+		</div>
+		<div class="col text-center">
+			<p class="font-weight-bold">Modifier</p>
+		</div>
+		<div class="col text-center">
+			<p class="font-weight-bold">Supprimer</p>
+		</div>
+	</div>
 		<?php
 			if ($test) {
 				$setBg = true;
@@ -33,9 +33,10 @@
 					$lib = $row[1];
 					$Code = $row[2];
 					$bg = "";
-					if($setBg) {
+					if($setBg){
 						$bg = "#CCE5FF";	
-					} else {
+					} 
+					else{
 						$bg = "#FFFFFF";
 					}
 					$setBg = !$setBg;
@@ -69,10 +70,11 @@
 
 							</div>
 						</div>');
-					}
+				}
 			}
-
-
 		?>
+	</div>
 </div>
 <?php include("footer.php");?>
+</body>
+</html>

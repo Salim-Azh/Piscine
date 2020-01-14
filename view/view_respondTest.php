@@ -7,7 +7,6 @@
 	<hr style="width: 50%;">
 	<form method="POST" action="../controller/ctrl_correctionTest.php" style="margin-left: 15%;" onsubmit="this.valider_rep.disabled = true;">
 		<div class="row">
-			
 			<?php
 				$cpt = 0;
 				for ($i=0; $i < 50; $i++) { 
@@ -40,47 +39,34 @@
 				}
 			?>
 		</div>
-		
-</div>
-	<div class="mt-5 mb-5 text-center">
+		<div class="mt-5 mb-5 text-center">
 			<input type="submit" name="valider_rep" id="valider_rep" class="btn btn-primary" value="Valider les réponses" />
 		</div>
 		<?php echo('<input type="hidden" name="idTest" id="idTest" value='.$idTest.'>'); ?>
 	</form>
-
-
-<script type="text/javascript">
-	
-	setTimeout(function(){ document.location.href="../controller/ctrl_homePage.php"; }, 3600000);
-
-	var cpt = 7200 ;
-var x ;
- 
-function decompte()
-{
-	
-    if(cpt>=0)
-    {
-        /*if(cpt>1)
-        {
-            var sec = " secondes.";
-        } else {
-            var sec = " seconde.";
-        }*/
-        heures = Math.floor(cpt/3600);
-        minutes = Math.floor((cpt-heures*3600)/60);
-		secondes = cpt%minutes;
-        document.getElementById("Chrono").innerHTML = heures + " h " + minutes + " min " + secondes + "sec" ;
-        cpt-- ;
-        x = setTimeout("decompte()",1000) ;
-    }
-    else
-    {
-        clearTimeout(x) ;
-    }
-}
-
-
-</script>
+</div>
 
 <?php include("footer.php");?>
+
+<script type="text/javascript">
+	setTimeout(function(){ document.location.href="../controller/ctrl_homePage.php"; }, 3600000);
+	var cpt = 7200;
+	var x;
+
+	function decompte(){
+    	if(cpt>=0){
+        	heures = Math.floor(cpt/3600);
+        	minutes = Math.floor((cpt-heures*3600)/60);
+			secondes = cpt%minutes;
+        	document.getElementById("Chrono").innerHTML = heures + " h " + minutes + " min " + secondes + "sec" ;
+        	cpt-- ;
+        	x = setTimeout("decompte()",1000) ;
+    	}
+    	else{
+        	clearTimeout(x) ;
+    	}
+	}
+</script>
+
+</body>
+</html>
