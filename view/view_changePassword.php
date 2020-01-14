@@ -1,6 +1,6 @@
 <?php 
 	include_once("header.php");
- ?>
+?>
 
 <div class="container">
 	<div class="text-center">
@@ -29,6 +29,6 @@
 	</div>
 </div>
 
-  <?php 
-	include_once("footer.php");
- ?>
+<?php include_once("footer.php");?>
+</body>
+</html>
