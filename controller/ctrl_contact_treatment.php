@@ -11,8 +11,7 @@ ini_set('display_errors', 'off');
 	********************************************************************************************
 */
 // destinataire est votre adresse mail. Pour envoyer à plusieurs à la fois, séparez-les par une virgule
-//$destinataire = 'resto.lecuelle@hotmail.com';
-$destinataire = '#';
+$destinataire = 'lele.mollard@gmail.com';
 
 
  

@@ -55,7 +55,6 @@ $(document).ready(function() {
     data: {
         labels: date,
         datasets: [{
-            label: 'Test',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
             data: note            
