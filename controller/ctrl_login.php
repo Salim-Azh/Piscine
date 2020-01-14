@@ -10,6 +10,5 @@
         if ($_GET['x'] == 2) {
             echo '<div class="font_blue"> Your Account was sucessfully created ! </div>';
         }
-
     }
     include_once('../view/view_login.php');

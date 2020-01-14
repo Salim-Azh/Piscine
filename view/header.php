@@ -1,6 +1,5 @@
-
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- favicon -->
     <link rel="icon" href="..\img\toeic.jpg" />
@@ -31,40 +30,36 @@
   </head>
 
   <body>
- 
-      <nav id="nav" class="shadow-sm navbar navbar-expand-lg sticky-top navbar-light px-5">
+    <nav id="nav" class="shadow-sm navbar navbar-expand-lg sticky-top navbar-light px-5">
 
-        <h2 id="titre" class="row font_blue align-items-center mt-2 ">
+      <h2 id="titre" class="row font_blue align-items-center mt-2 ">
         <!-- logo de l'entreprise -->
         <img id="logo" src="..\img\toeic.jpg" width="70" height="70" class="align-items-center logo" >
-        <strong>&nbsp; TOEIC</strong></h2>
-        <!-- bouton hamburger pour un menu responsif -->
-        <a class="navbar-brand d-flex justify-content-end">  
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_target" aria-controls="collapse_target" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>                     
-          </button>
-        </a>
+        <strong>&nbsp; TOEIC</strong>
+      </h2>
+      <!-- bouton hamburger pour un menu responsif -->
+      <a class="navbar-brand d-flex justify-content-end">  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_target" aria-controls="collapse_target" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>                     
+        </button>
+      </a>
 
-            
-            
-            <?php
-            //on affiche des choix différent dans le header si il est connecté / pas connecté / admin ou étudiant
-            
-              if (isset($_SESSION['adm'])){
-                if ($_SESSION['adm'] == 1){
-                  include_once("header_admin.php");
-                }elseif ($_SESSION['adm'] == 0) {
-                  include_once("header_user.php");
-                }
-              }else{
-                // sinon pas connecter on affiche donc le "se connecter " et "s'enregistrer"
-                include_once("header1.php");
-              }
-            ?>
-          
-          
-        
-      </nav>
+      <?php
+        //on affiche des choix different dans le header si il est connecte / pas connecte / admin ou etudiant
+        if (isset($_SESSION['adm'])){
+          if ($_SESSION['adm'] == 1){
+            include_once("header_admin.php");
+          }
+          else{
+            include_once("header_user.php");
+          }
+        }
+        else{
+          //sinon pas connecter on affiche donc le "se connecter " et "s'enregistrer"
+          include_once("header1.php");
+        }
+      ?>
+    </nav>
 
                                               
                                                    

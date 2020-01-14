@@ -53,7 +53,7 @@
 			});
 
 			if(profform.style.display =="none"){
-				//si c'est le cas on vérifie d'abord que la partie enseignant soit cachée elle aussi et si ce n'est pas le cas on la fait disparaitre
+				//si c'est le cas on verifie d'abord que la partie enseignant soit cachee elle aussi et si ce n'est pas le cas on la fait disparaitre
 				if (studentform.style.display !="none") {
 					$(studentform).toggle("slow");
 				}

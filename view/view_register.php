@@ -65,6 +65,7 @@
 					<label class="d-flex flex-row " for="grp">Groupe</label>
 					<select class="form-control" id='grp' name='grp' required>
 						<?php
+						//For each row in the request result take the id and the name
 						if($grp){
 							foreach ($grp as $row) {
 								$id=$row[0];
@@ -89,6 +90,7 @@
 
 <?php include("footer.php");?>
 
+<!-- js file call just before body's end so that the HTML DOM is created for sure  -->
 <script src="../js/inscription.js"></script>
 </body>
 </html>

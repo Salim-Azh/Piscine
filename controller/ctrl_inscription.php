@@ -1,9 +1,9 @@
 <?php
-	require_once('../model/db.php');
-    require_once('../model/user.php');
+	require_once('../model/db.php'); // db connection
+    require_once('../model/user.php'); //user creation
     require_once('../model/security.php');
 
-    // We make harmless HTML tags that the user could enter with html function
+    // We make harmless HTML tags that the user could enter with bdd function
     $type = Security::bdd($_POST['type']);
     $name = Security::bdd($_POST['name']);
     $firstName = Security::bdd($_POST['firstName']);
@@ -16,6 +16,6 @@
         $grp = Security::bdd($_POST['grp']);
         $user = new User($co, $name, $firstName, $mail, $pwd, $numStu, $spe, $year, $grp);
     }
-    else {
+    else { //Enseignant
         $user = new User($co, $name, $firstName, $mail, $pwd);
     }
