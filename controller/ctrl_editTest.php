@@ -3,7 +3,7 @@
 	require_once('../model/db.php');
 	require_once('../model/security.php');
 	require_once('../model/getQuestions.php');
-
+	//On vérifie que le test correspond bien à une correction et on récupère l'id du test en question
 	$idTest = Security::bdd($_POST['idTest']);
 	$verify = getQuestions($idTest);
 	if($verify) {
