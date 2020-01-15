@@ -4,12 +4,11 @@
 	require_once('../model/test.php');
 	$nameTest = Security::bdd($_POST['nameTest']);
 	$tabChoix = [];
+	//On récupère chaque réponse on les insère dans un tableau et on créé ensuite un test
 	for ($i = 1; $i <= 200; $i++) {
 		array_push($tabChoix, Security::bdd($_POST[$i]));
-	}/*
-	echo('<div class="spinner-border text-success" role="status">
-  		<span class="sr-only">Loading...</span>
-		</div>');*/
+	}
+	
 	$test = new Test($tabChoix,$nameTest,$co);
 
 	
