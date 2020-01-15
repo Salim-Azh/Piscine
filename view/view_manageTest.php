@@ -6,7 +6,7 @@
 	</div>
 	<hr style="width: 50%;">
 	<?php 
-		if (isset($_POST['Code']) && isset($_POST['lib']) ){
+		if (isset($_POST['Code']) && isset($_POST['lib'])){
 			echo "<h5 class='text-center font_blue mt-5 mb-5'>Voici le code du test ".$libel." : ".$code." </h5>";
 		}
 	 ?>

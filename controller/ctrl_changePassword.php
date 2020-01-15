@@ -4,7 +4,7 @@
 	require_once('../model/security.php');
 	require_once('../model/user.php');
 
-	//on teste si tous les champs on bien été reçu et on compare les nouveaux entre eux et l'ancien avec celui stocké en bdd
+	//on teste si tous les champs on bien ete recu et on compare les nouveaux entre eux et l'ancien avec celui stocke en bdd
 	//on affiche ensuite un message en fonction
 	if(isset($_POST['mdp1']) and isset($_POST['mdp2']) and isset($_POST['mdp0'])){
 		$mdp0 = $_POST['mdp0'];
@@ -12,9 +12,10 @@
 		$mdp2 = $_POST['mdp2'];
 		if ($mdp1 != $mdp2 or $_SESSION['pwd'] != sha1($mdp0)){
 			echo ('<p class="font_blue"> LES MOTS DE PASSE NE CORRESPONDENT PAS</p>');
-		}else{
+		}
+		else{
 			$idUser = $_SESSION['idUser'];
-			$newpwd = sha1(Security::bdd($mdp1));
+			$newpwd = sha1(Security::bdd($mdp1)); //hash password
         	$modifPwd = "UPDATE user SET pwdUser = '$newpwd' WHERE idUser = '$idUser'";
        		mysqli_query($co, $modifPwd) or die("err change pwd");
 
