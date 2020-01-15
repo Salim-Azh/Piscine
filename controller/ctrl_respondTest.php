@@ -7,7 +7,7 @@
 
 	$idTest = Security::bdd($_POST['id']);
 	$libTest = getTestName($idTest);
-
+	//on verifie que le test existe et on affiche la vue sinon on redirige
 	if ($libTest) {
 		include_once('../view/view_respondTest.php');
 	}
