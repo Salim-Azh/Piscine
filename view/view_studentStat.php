@@ -2,35 +2,6 @@
 
 <div class="container mt-5 mb-5">
 
-	<?php
-		if (isset($_GET['nom']) && isset($_GET['prenom'])){
-			$nom = $_GET['nom'];
-			$prenom = $_GET['prenom'];
-		} else {
-			$nom = $_SESSION['firstName'];
-			$prenom = $_SESSION['name'];
-		}
-
-		//affichage par défaut
-		$type = 0; 
-
-		if(isset($_POST['all'])) { 
-            $type = 0;
-        }
-
-        if(isset($_POST['listening'])) { 
-            $type = 1; 
-        }
-         
-        if(isset($_POST['reading'])) { 
-            $type = 2;
-        }
-        
-		//$part permet de savoir quelles partie du toeic on récupère
-		$res = getAllNote($nom, $prenom, $type);
-
-    ?>
-
  	<div class="text-center">
 		<?php
 			echo('<h1 class="font_blue">Statistiques de '.$nom.' '.$prenom.'</h1>');
@@ -57,3 +28,5 @@
 
 
 <?php include("footer.php");?>
+</body>
+</html>

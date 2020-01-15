@@ -5,9 +5,11 @@
 	require_once('../model/fill.php');
 	require_once('../model/getCorrection.php');
 	
-	//on récupère l'id du test
+	//on recupere l'id du test
 	$idTest = Security::bdd($_POST['idTest']);
-	$tabCorrection = getCorrection($idTest);
+
+	$tabCorrection = getCorrection($idTest); //tabCorrection contient les bonnes reponses a chaque questions
+	
 	$tabChoix = [];
 	$repPart1 = 0;
 	$repPart2 = 0;
@@ -16,6 +18,7 @@
 	$repPart5 = 0;
 	$repPart6 = 0;
 	$repPart7 = 0;
+
 	//on calcule le score en fonction
 	for ($i = 1; $i <= 200; $i++) {
 		array_push($tabChoix, Security::bdd($_POST[$i]));
@@ -71,22 +74,21 @@
 	array_push($rep, $repPart5);
 	array_push($rep, $repPart6);
 	array_push($rep, $repPart7);
-	//On créé le score 
+
+	//Enregistrement des scores dans la base de donnees 
 	$fill = new Fill($idTest, $_SESSION['idUser'], $rep, $co);
 
-	
 	//on modifie le code du test lorsque le premier élève à terminé
-		$caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-		$longueurMax = strlen($caracteres);
-		$chaineAleatoire = '';
-		for ($i = 0; $i < 7; $i++)
-		{
-			$chaineAleatoire .= $caracteres[rand(0, $longueurMax - 1)];
-		}
-			$code = $chaineAleatoire;
-			
-		$req = "UPDATE test SET Code = '$chaineAleatoire' Where idTest = $idTest ";
-			mysqli_query($co, $req) or die("err Changement code test");
+	$caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	$longueurMax = strlen($caracteres);
+	$chaineAleatoire = '';
+	for ($i = 0; $i < 7; $i++){
+		$chaineAleatoire .= $caracteres[rand(0, $longueurMax - 1)];
+	}
+	$code = $chaineAleatoire;
+		
+	$req = "UPDATE test SET Code = '$chaineAleatoire' Where idTest = $idTest ";
+	mysqli_query($co, $req) or die("err ctrl_correction.php");
 
 		
 	

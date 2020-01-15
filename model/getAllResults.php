@@ -1,4 +1,5 @@
-<?php  
+<?php 
+	//retourne les scores de l'etudiant dont l'identifiant dans la base est $idUser
 	function getAllResults($idUser) {
 		require('db.php');
 		$rep = "SELECT score FROM fill WHERE FK_idUser = $idUser";

@@ -5,41 +5,40 @@
 		<h1 class="font_blue">Statistiques par élève</h1>
 	</div>
 	<hr style="width: 50%;">
+
 	<form method="post" action="../controller/ctrl_searchStudent.php">
 		<div class="row mt-5">
-			
 			<div class="col">
-				<label class="d-flex flex-row " for="spe">Spécialité</label>
+				<label class="d-flex flex-row " for="speChoice">Spécialité</label>
 				<select class="form-control" name='speChoice' id='speChoice' required>
 					<option value="-">-</option>
-			<?php
-				if($spe){
-					foreach ($spe as $row) {
-						$id=$row[0];
-						$lib=$row[1];
-						echo "<option value='".Security::html($id)."'>".Security::html($lib)."</option>";
-					}
-				}
-
-			?>
+					<?php
+						if($spe){
+							foreach ($spe as $row) {
+								$id=$row[0];
+								$lib=$row[1];
+								echo "<option value='".Security::html($id)."'>".Security::html($lib)."</option>";
+							}
+						}
+					?>
 				</select>
-				</div>
-				<div class="col">
-					<label class="d-flex flex-row" for="year">Année</label>
-							<select class="form-control" name='year' id='year' required>
-								<option value="-">-</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-				</div>
 			</div>
-
-			<div class="text-center">
-				<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Rechercher" id='envoi'/></div>
+			<div class="col">
+				<label class="d-flex flex-row" for="year">Année</label>
+						<select class="form-control" name='year' id='year' required>
+							<option value="-">-</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
 			</div>
+		</div>
 
-		</form>
+		<div class="text-center">
+			<div class="mt-4" ><input type="submit" class="btn btn-primary" name="envoi" value="Rechercher" id='envoi'/></div>
+		</div>
+
+	</form>
 
 	<div class="container">
 		<div class="row">
@@ -60,8 +59,13 @@
 
 			<?php 			
 				$setBg = true;
-				if (isset($name)) {
-					foreach ($name as $row) {
+				if (isset($stu) && !empty($stu)) {
+					foreach ($stu as $row) {
+						$idUser = $row[0];
+						$prenom = $row[1];
+						$nom = $row[2];
+
+						//on alterne la couleur du fond a chaque ligne
 						$bg = "";
 						if($setBg) {
 							$bg = "#CCE5FF";	
@@ -70,19 +74,20 @@
 						}
 						$setBg = !$setBg;
 						
-						echo('<div onclick="document.location=\'../controller/ctrl_studentStat.php?prenom='.$row[0].'&nom='.$row[1].'\'" class=" mt-2 shadow-sm row text-center mx-auto grossir" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
+						echo('<div onclick="document.location=\'../controller/ctrl_studentStat.php?id='.$idUser.'\'" class=" mt-2 shadow-sm row text-center mx-auto grossir" style="cursor: pointer; background-color: '.$bg.'; width: 60%;">
 								<div class="col text-center">
 									<div class="p-1">
-										<p class="mt-2 mb-2 ">'.$row[0].'</p>
+										<p class="mt-2 mb-2 ">'.$prenom.'</p>
 									</div>
 								</div>
 								<div class="col text-center ">
 									<div class="p-1">
-										<p class="mt-2 mb-2">'.$row[1].'</p>
+										<p class="mt-2 mb-2">'.$nom.'</p>
 									</div>
 								</div>
 							</div>'
 						);
+
 					}
 				}
 			 ?>
@@ -91,6 +96,8 @@
 		</div>
 	</div>
 </div>
+
 <?php include("footer.php");?>
+
 </body>
 </html>
