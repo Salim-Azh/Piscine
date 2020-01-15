@@ -58,7 +58,7 @@
 				<select class="form-control" id='part' name='part' required>
 					<option value="0">Total</option>
 					<option value="-1">listening</option>
-					<option value="-2">writing</option>
+					<option value="-2">reading</option>
 					<option value="1">part 1</option>
 					<option value="2">part 2</option>
 					<option value="3">part 3</option>

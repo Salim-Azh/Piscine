@@ -22,7 +22,7 @@
             $type = 1; 
         }
          
-        if(isset($_POST['writing'])) { 
+        if(isset($_POST['reading'])) { 
             $type = 2;
         }
         
@@ -46,15 +46,14 @@
 		</div>
 
 		<form class="mt-3" method="post">
-	 		<input type="submit" class="btn btn-info mb-0 mr-2" style="height:100%;" name="all" value="listening & writing"/> 
+	 		<input type="submit" class="btn btn-info mb-0 mr-2" style="height:100%;" name="all" value="listening & reading"/> 
 			<input type="submit" class="btn btn-info mb-0 mr-2" style="height:100%;" name="listening" value="listening"/> 
-			<input type="submit" class="btn btn-info mb-0 mr-2" style="height:100%;" name="writing" value="writing"/> 
+			<input type="submit" class="btn btn-info mb-0 mr-2" style="height:100%;" name="reading" value="reading"/> 
     	</form>
 
 	</div>
 
 </div>
 
+
 <?php include("footer.php");?>
-</body>
-</html>
