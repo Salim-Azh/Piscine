@@ -5,6 +5,7 @@
 	require_once('../model/fill.php');
 	require_once('../model/getCorrection.php');
 	
+	//on récupère l'id du test
 	$idTest = Security::bdd($_POST['idTest']);
 	$tabCorrection = getCorrection($idTest);
 	$tabChoix = [];
@@ -15,7 +16,7 @@
 	$repPart5 = 0;
 	$repPart6 = 0;
 	$repPart7 = 0;
-
+	//on calcule le score en fonction
 	for ($i = 1; $i <= 200; $i++) {
 		array_push($tabChoix, Security::bdd($_POST[$i]));
 	}
@@ -70,10 +71,10 @@
 	array_push($rep, $repPart5);
 	array_push($rep, $repPart6);
 	array_push($rep, $repPart7);
-
+	//On créé le score 
 	$fill = new Fill($idTest, $_SESSION['idUser'], $rep, $co);
 
-
+	
 	//on modifie le code du test lorsque le premier élève à terminé
 		$caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		$longueurMax = strlen($caracteres);
