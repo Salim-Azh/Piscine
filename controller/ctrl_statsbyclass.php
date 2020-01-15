@@ -6,10 +6,11 @@
 	require_once('../model/getGroup.php');
 	require_once('../model/getGroupNote.php');
 
-//get speciality in db
+	//get speciality, group in db
 	$spe = getSpeciality();
 	$grp = getGroup();
-
+	
+	//On récupère les groupe en bdd
 	if(isset($_POST['speChoice'])) {
         $tempo = $_POST['speChoice'];
 		$req = "SELECT libSpeciality FROM speciality WHERE idSpeciality = $tempo";
